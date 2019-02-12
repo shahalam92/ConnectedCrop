@@ -1,0 +1,204 @@
+
+.sub-asset-container{
+width: 47%;
+background: transparent;
+color: #fff;
+margin-left: 2%;
+margin-bottom: 10px;
+height: 90px;
+display: inline-block;
+border: 1px solid gray !important;
+border-radius: 7px;
+padding: 1%;;
+}
+.asset-name{
+color: #fff;
+font-size: 23px;
+font-family: haHalvetica_light_neuel
+}
+.asset-header,.asset-header .col{
+color: #fff;
+}
+
+.asset-name .col-75{
+color: #fff;
+
+}
+.menu-icon{
+font-size: 30px;
+}
+
+.asset-org{
+padding-bottom: 0;
+color: #fff;
+}
+.asset-org .ion-ios-location{
+color: grey;
+}
+.org-name{
+margin-left: -5%;
+}
+.comm-time{
+/*margin-left: -7%;*/
+padding-right: 1px;
+}
+.comm-time-red{
+color: #FA421e;
+}
+.comm-time-blue{
+color: #6d9fc9;
+
+}
+.asset-comm .comm-heading{
+color:#9a9a9a;
+font-size: 12px;
+
+}
+.bat-icon img{
+width: 110%;
+}
+.bat-reading-font{
+font-family: Halvetica_light_neue;
+font-size: 24px;
+}
+.sensor-box-div {
+float: left;
+width: 100%;
+overflow: hidden;
+height: 55px;
+}
+.sensor-icon-container{
+height: 100%;
+width: 25%;
+float: left;
+}
+.sensor-icon-t1sm1-temp{
+background: url(./../img/stationTemperature.png) no-repeat center center;
+-webkit-background-size: 36%;
+-moz-background-size: 36%;
+background-size: 36%;
+}
+.sensor-icon-t1sm1-soil{
+background: url(./../img/stationSoilmoisture.png) no-repeat center center;
+-webkit-background-size: 83%;
+-moz-background-size: 83%;
+background-size: 83%;
+}
+.sensor-reading-container{
+width: 75%;
+float: right;
+line-height: 38px;
+font-size: 48px;
+height: 100%;
+
+}
+
+
+
+.sensor-reading-container img{
+width: 70%;
+}
+.sensor-reading-unit{
+font-size: 20px;
+margin-left: -9px;
+}
+.sensor-error-font{
+font-size: 16px;
+}
+.sensor-name-container{
+color: white;
+width: 100%;
+word-wrap: break-word;
+float: right;
+text-align: center;
+font-family: Halvetica_light_neue;
+font-size: 14px;
+line-height: 1.05em;
+}
+.reading-color-high{
+color: #93d637;
+/*color: #fff;*/
+font-size: 21px;
+}
+.scroll-bar-indicator{
+background: #fff;
+}
+.sensor-status-normal{
+color: #93d637;
+/*color: #fff;*/
+}
+.reading-color-error{
+color: grey;
+}
+.reading-color-low,.sensor-status-critical{
+color: #FA421e;
+}
+.sensor-status-error{
+color: #FA421e; 
+text-align: left;
+padding-left: 5% !important;
+}
+.please,.Please{
+line-height: 20px;
+
+}
+.error,.Error{
+padding-left: 15% !important;
+
+}
+.reading-color-moderate,.sensor-status-warning{
+color: #dbac0a;
+/*color: #fff;*/
+}
+
+.add-button{
+width: 35px;
+height: 35px;
+text-align: center;
+margin-right: 2%;
+margin-left: 88%;
+}
+.add-button-bottom{
+position: absolute;
+bottom: 20px;
+}
+.float-button { 
+position: fixed;
+z-index: 11;
+bottom: 60px;
+right: 10px;
+}
+.float-button button {
+border-radius: 50%;
+min-width: 45px;
+min-height: 45px;
+width: 45px;
+opacity: 1;
+transform: translate3d(0%, 0px, 0px);
+background-color: transparent;
+border-color: #fff;
+border-width: 2px;
+}
+.float-button button.activated {
+border-color: #fff !important;
+}
+.padding-tb-0,.padding-tb-0 .col{
+padding-top: 0;
+padding-bottom: 0;
+}
+.padding-l-0 ,.padding-l-0 .col{
+padding-left: 0;
+}
+.padding-r-0 ,.padding-r-0 .col{
+padding-right: 0;
+}
+.padding-t-0 {
+padding-top: 0;
+}
+.padding-b-0{
+padding-bottom: 0;
+}
+.padding-lr-0{
+padding-left: 0;
+padding-right: 0;
+}

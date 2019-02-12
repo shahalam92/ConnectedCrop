@@ -1,0 +1,218 @@
+.activateStationImg {
+background-image: url('./../img/activateStation/activate_station_bg.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+}
+.activate p{
+  font-size: 17px;
+}
+.input_container{
+    border: 2px solid #e4edf2;
+    margin: 3%;
+    border-radius: 10px;
+    padding-bottom: 3%;
+    text-align: left;
+}
+.input_container span{
+  margin-left: 10%;
+  display: none
+}
+.activate button{
+  color: #fff;
+  width: 70%;
+  font-size: 20px;
+  font-family: Halvetica_light_neue;
+  border-radius: 22px;
+  padding: 2%;
+  border: none;
+}
+.radio_popup{
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  height: 60vh;
+  top:20vh;
+}
+.activate input{
+      font-size: 16px;
+      color: #14892c !important;
+      background-color: #fff !important;
+      padding-left: 3%;
+      border: 1px solid #D6DBDF;
+      border-radius: 4px;
+      width: 85%;
+      margin: auto;
+      margin-top: 3%;
+}
+.activate_button{
+  background-color: #549300 !important;
+  margin-left: 15%;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+.serial_no_background{
+  width:94%;
+  border: 2px solid #e4edf2;
+  border-radius: 5px;
+  height: 150px;
+  margin: auto;
+}
+.scan_QR button{
+  background-image: url('./../img/activateStation/scanQR_img.png');
+  background-size: 10%;
+  background-position: 10%;
+  background-repeat: no-repeat;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #7b8da1 !important;
+}
+.step_no{
+  padding: 2%;
+  font-family: HelveticalNeue;
+  padding-bottom: 0;
+}
+.step_no p{
+ color: #0d3153;
+ font-family: GothamBold;
+}
+.step_no span{
+  color: #b5c6d2;
+}
+.step_one_message{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.scan_QR h4{
+  font-family: GothamMedium;
+ color: #b5c6d2;
+}
+
+.input_div{
+  margin-top: 2%;
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  font-size: 17px;
+  font-family: Halvetica_light_neue;
+  margin-top: 3%;
+}
+.input_div input[type="text"]::-webkit-input-placeholder {
+    color: #BDCAD4;
+    font-size: 17px;
+    font-family: Halvetica_light_neue;
+}
+.solution_select{
+width: 87%;
+background-size: 10%;
+background-position: 98%;
+padding-left: 1%;
+margin: auto;
+float: none;
+color:#A3B4BF;
+background-color: #dde3e7;
+margin-top: 2%;
+
+}
+.solution_select option:first-child{
+  /*color:#14892c;*/
+}
+.margin_top_{
+margin-top: 4%;
+}
+.margin_bottom_{
+margin-bottom: 4%;
+}
+.margin_bottom_zero{
+  /* margin-bottom: 0; */
+}
+.next_button{
+  position: absolute;
+  margin: 0;
+  margin-left: 15%;
+  bottom: 0;
+}
+/*waiting for Reading Css*/
+.spinner.spinner-dark {
+stroke: #BDCAD4;
+fill: #BDCAD4;
+}
+.custom.spinner svg {
+    width: 50px;
+    height: 50px;
+}
+/*error one page */
+.error_heading img{
+  float:left;
+  width: 12%;
+  margin-right: 3%;
+}
+.error_one_page{
+  margin: 3%;
+}
+.point_no img{
+  width: 8%;
+  float: left;
+  margin-right: 3%;
+}
+.points{
+  margin-top: 13%;
+  margin-bottom: 13%;
+
+}
+.point_no p{
+  margin-left: 11%;
+}
+.point{
+  margin: 5% 0 5% 0;
+}
+.step_3_page p{
+  font-size: 18px;
+}
+
+.sm1-active {
+     background: url(./../img/activateStation/sm1.png) no-repeat center center;
+     -webkit-background-size: 70%;
+     -moz-background-size: 70%;
+     background-size: 70%;
+}
+.sm2-active{
+     background: url(./../img/activateStation/sm2.png) no-repeat center center;
+     -webkit-background-size: 70%;
+     -moz-background-size: 70%;
+     background-size: 70%;
+
+}
+
+.t2-active{
+     background: url(./../img/activateStation/blue_t2.png) no-repeat center center;
+     -webkit-background-size:  53%;
+     -moz-background-size:  53%;
+     background-size:53%;
+
+}
+.t1-active {
+     background: url(./../img/activateStation/blue_t1.png) no-repeat center center;
+     -webkit-background-size:  53%;
+     -moz-background-size:  53%;
+     background-size:53%;
+
+}
+.sm-active{
+     background: url(./../img/activateStation/blue_sm.png) no-repeat center center;
+     -webkit-background-size: 83%;
+     -moz-background-size: 83%;
+     background-size: 83%;
+}
+.t-active{
+       background: url(./../img/activateStation/blue_t.png) no-repeat center center;
+      -webkit-background-size: 36%;
+      -moz-background-size: 36%;
+      background-size: 36%;
+}
+.pointy-border{
+  background: url(./../img/activateStation/pointy_border.png) no-repeat center center;
+  -webkit-background-size: 45%;
+  -moz-background-size: 45%;
+  background-size: 45%;
+}

@@ -1,0 +1,170 @@
+
+.compareIconContainerDiv{
+position: absolute;
+margin-left: 2%;
+margin-top: 1%;
+height: 30px;
+width: 6%;
+
+}
+.compareIconNoRecords{
+position: absolute;
+margin-left: -7%;
+margin-top: -2%;
+height: 30px;
+width: 6%;
+}
+
+.ReadOnTxtBlue{
+color:#6d9fc9;
+margin-left: 12%;
+display: block;
+line-height: 0.8em;
+}
+
+.ReadOnTxtRed{
+color:#FA421e !important;
+margin-left: 12%;
+display: block;
+line-height: 0.8em;
+}
+.sensorDataLiClass {
+padding: 1%;
+padding-top: 3%;
+}
+.detectiondate{
+color: #97A1AA;
+font-size: 11px;
+}
+.no_items_style{
+color:#FA421e;
+text-align:left;
+margin-left: 8%;
+padding: 2%;
+}
+
+/* .ReadOnTxtClass{
+margin-left: 10%
+}*/
+
+/*.graphIconSpanComparPgLeftLastReading {
+margin-top: 6% !important;
+position: absolute;
+left: 7%;
+color: #fff;
+}
+
+.graphIconSpanComparPgRightLastReading {
+margin-top: 6% !important;
+position: absolute;
+right: 7%;
+color: #fff;
+}*/
+
+.readingDetailsContainerLastReadingPg {
+width: 94%;
+margin-left: 3%;
+color: #fff;
+min-height: 200px;
+}
+
+.readingDeatailTitleSpanLastReading{
+font-size: 14px;
+color: #fff;
+}
+
+.UlStationClass{
+margin-top:3%;
+}
+
+.LiStationClass{
+background: rgba(193,175,101,0.15);
+margin: 1px;
+margin-bottom: 4%;
+/*min-height: 55px;*/
+border-top: 3px solid #C1AF65;
+padding-bottom: 5px;
+}
+.metric_value_font{
+font-size: 17px;
+}
+
+.titleLiStationClass{
+display: block;
+font-size: 16px;
+width: 100%;
+background-color: rgba(193,175,101,0.3);
+padding: 2%;
+padding-left: 3%;
+}
+.LiStationClass:nth-child(2){
+background: rgba(147,214,55,0.14);
+border-top: 3px solid #93d637;
+}
+.LiStationClass:nth-child(2) .titleLiStationClass{
+background-color: rgba(147,214,55,0.3);
+}
+.LiStationClass:nth-child(3){
+background:rgba(127, 164, 190, 0.14);
+border-top: 3px solid #7FA4BE;
+}
+.LiStationClass:nth-child(3) .titleLiStationClass{
+background-color: rgba(127, 164, 190, 0.4);
+}
+.LiStationClass:nth-child(4){
+background:rgba(115, 114, 84, 0.14);
+border-top: 3px solid #737254;
+}
+.LiStationClass:nth-child(4) .titleLiStationClass{
+background-color: rgba(115, 114, 84, 0.4);
+}
+.li_next_button{
+
+}
+.sensorLiClass{
+text-align: left;
+margin-top: 4%;
+margin-bottom: 2%;
+}
+
+/*.sensorLiTitleClass{
+margin-left: 10%;
+}
+
+.metricLiClass{
+margin-left: 4%;
+}*/
+
+.compareSensorPageImg {
+background-image: url('./../img/compareStationsPgBg.jpg') !important;
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+background-size: cover !important;
+}
+
+li + .no-items {
+display: none;
+}
+
+.divChartContainerComparePg{
+position: absolute;
+height: 230px;
+width: 100%;
+}
+
+.divChartContainerComparePgTemp{
+position: absolute;
+height: 230px;
+width: 100%;
+background-image: url('./../img/sensorTemperatureDim.png');
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+background-repeat: no-repeat;
+background-left: 30%;
+background-position: center;
+background-size: 15%;
+}
+.readingDeatailTitleSpan{
+margin-left: -15%;
+}

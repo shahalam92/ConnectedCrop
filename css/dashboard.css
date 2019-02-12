@@ -1,0 +1,864 @@
+/*station menu icon css*/
+.popover_menu{
+  float: right;
+  color: #000;
+  width: 40%;
+}
+.popover_menu_icon{
+  float: right;
+  width: 4%;
+
+}
+.icon-small {
+    font-size: 28px;
+    margin-left:105%;
+    color:#fff;
+   }
+.popoverclass a {
+  color: black;
+  /*padding: 12px 16px;*/
+  text-decoration: none;
+  /*display: block;*/
+
+}
+.popoverclass {
+    text-decoration: none;
+    color: black;
+
+    /*top: 0;*/
+    display: block;
+    padding: 0 20px;
+
+}
+
+.popoverclass1{
+  /*float:right;*/
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  margin-top:1%;
+  height: 65px;
+  width: 45%;
+  opacity:1;
+  margin-left: 56%;
+  text-align:left;
+  line-height: 175%;
+
+}
+
+
+
+    .popoverclass span {
+        display: block;
+        font-weight: 700;
+    }
+
+/*sTATION MENU ICON CSS end*/
+.error-text{
+ color:#FA421e;
+ font-size: 22px;
+ line-height: 2em;
+}
+.vertial_align_parent{
+	/* display: table; */
+}
+.vertial_align{
+	/* display: table-cell;
+	vertical-align: middle; */
+}
+.error-text-small-temp{
+	 line-height: 1em;
+	padding-top: 17%;
+	font-size: 22px;
+}
+.error-text-small-soil{
+	padding-top: 6%;
+	 font-size: 18px;
+	 line-height: 1em;
+}
+
+.battery-list{
+   border:none !important;
+}
+.sensor-box-div{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+   }
+ .unit{
+    font-size: 17px;
+    padding-top: 1%;
+    font-family: Halvetica_neue_thin
+ }
+.sensor-battery-div{
+    /* height: 90px; */
+    height: 188px;
+    /* float: right; */
+    border: 1px solid gray;
+    width: 27%;
+    padding: 1%;
+    border-radius: 7px;
+    margin-top: 8px;
+    position: absolute;
+    right: 3%;
+    font-family: Halvetica_light_neue;
+    }
+
+ .sensor-reading-div{
+    height: 58px;
+    float: right;
+    width: 78%;
+    color: #bfad6a;
+    padding: 1%;
+    padding-left: 2%;
+    margin-right: 2%;
+
+}
+.sensor-reading-div-small{
+	width: 65%;
+}
+.sensor-name{
+	color: white;
+    height: 26px;
+    width: 70%;
+    word-wrap: break-word;
+   /*  font-size: 13px; */
+    font-size: 12px;
+    line-height: 1em;
+    float: right;
+     margin-right: 2%;
+    text-align: center;
+    /* padding-top:2%; */
+    font-family: Halvetica_light_neue;
+}
+.sensor-name-small{
+width: 66%;
+}
+/* li.dashboard-new:nth-child(n+3):nth-child(odd) .sensor-box-div.sensor-name li.dashboard-new:nth-child(n+3):nth-child(odd) .sensor-box-div.sensor-reading-div{
+	margin-left:0 !important;
+	padding-left: 0 !important;
+} */
+.sensor-reading{
+	height: 100%;
+    line-height: 52px;
+    font-size: 49px;
+    text-align: center;
+}
+.sensor-reading-unit{
+    /* font-size: 10vw; */
+}
+.reading{
+	float: left;
+}
+ .battery-level-text{
+ 	width: 100%;
+    text-align: center;
+    line-height: 1.15em;
+    font-size: 12px;
+	/* width: 76%;
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 13px;
+    margin-left: 12%;
+    height: 50%;
+    padding: 5% 0 0 0; */
+
+ }
+
+ .sensor-icon-div{
+    height: 80px;
+    width:  7vh;
+    /* margin-left: 2%; */
+    float: left;
+}
+.warning-icon{
+	height:23px;
+    width: 11%;
+    float: right;
+    background: url(./../img/excavation.png) no-repeat center center;
+   -webkit-background-size: 95%;
+   -moz-background-size: 95%;
+    background-size: 95%;
+    /* margin-right: 1%; */
+}
+.sensor-icon-t1 {
+	 background: url(./../img/dt2_active.png) no-repeat center center;
+    -webkit-background-size:  53%;
+    -moz-background-size: 53%;
+    background-size:  53%;
+}
+.sensor-icon-t2 {
+    background: url(./../img/dt1_active.png) no-repeat center center;
+    -webkit-background-size:  53%;
+    -moz-background-size:  53%;
+    background-size:53%;
+}
+.sensor-icon-sm1 {
+     background: url(./../img/sm2_active.png) no-repeat center center;
+    -webkit-background-size: 70%;
+    -moz-background-size: 70%;
+    background-size: 70%;
+}
+.sensor-icon-sm2 {
+
+	  background: url(./../img/sm1_active.png) no-repeat center center;
+    -webkit-background-size: 70%;
+    -moz-background-size: 70%;
+    background-size: 70%;
+}
+.sensor-icon-t1sm1-temp{
+	 background: url(./../img/stationTemperature.png) no-repeat center center;
+      -webkit-background-size: 45%;
+    -moz-background-size: 45%;
+    background-size: 45%;
+}
+.sensor-icon-t1sm1-soil{
+	    background: url(./../img/stationSoilmoisture.png) no-repeat center center;
+    -webkit-background-size: 90%;
+    -moz-background-size: 90%;
+    background-size: 90%;
+}
+.battery-icon-small{
+    height: 50px;
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 4%;
+    }
+.battery-icon{
+/*     height: 100%;
+    width: 14%;
+    float: left;
+    margin-left: 8%; */
+    height: 50px;
+    width: 30%;
+    margin: 47% 33% 12% 33%;
+
+ }
+ .battery-icon-small_error{
+     height: 50px;
+     width: 100%;
+     text-align: center;
+     margin-top: 4%;
+     color:#FA421e;
+     font-size: 18px;
+     }
+ .battery-icon_error{
+ /*     height: 100%;
+     width: 14%;
+     float: left;
+     margin-left: 8%; */
+     height: 50px;
+     width: 100%;
+     margin: 47% 0% 12% 0%;
+     text-align: center;
+     color:#FA421e;
+     font-size: 18px;
+
+  }
+/*  .battery-percentage-font{
+    width: 73%;
+    font-size: 31px;
+    float: right;
+    text-align: center;
+    padding-top: 12px;
+    height: 100%;
+}
+.battery_unit{
+	font-size: 14px;
+}
+ .battery_icon_percentage{
+     height: 50%;
+     width: 100%;
+ } */
+.battery-icon-high,.battery-icon-normal{
+    background: url(./../img/battery_G.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+.battery-icon-error{
+	background: url(./../img/battery_grey.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+ .battery-icon-low {
+    background: url(./../img/battery_R.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.battery-icon-moderate {
+    background: url(./../img/battery_y.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.dashBoardPageImg {
+background-image: url('./../img/dashboardpgbg.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+}
+
+.dashBoardHeader{
+    background-image: url('./../img/dashboardheader.png') !important;
+    -webkit-background-size: contain;
+    -moz-background-size: 100%;
+    background-size: 96%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+}
+
+.dashBordHeaderMapButton{
+    position: relative;
+    left: 78%;
+    top: 13%;
+}
+
+.dashBordHeaderMapOnIcon{
+    width: 96%;
+
+}
+
+.dashBoardHeaderTitle{
+margin: 0 4px !important;
+}
+
+.dashBoardHeaderTitleImg{
+width: 100%;
+margin-top: 3%;
+}
+
+.has-header {
+top: 55px;
+}
+.has-header.dashboardContent{
+top: 46px;
+}
+
+.has-footer {
+bottom: 50px;
+}
+
+.dashBoardSubFooter{
+border-top-color: transparent !important;
+background: 0 !important;
+bottom: 50px !important;
+height: 40px !important;
+}
+
+#dashboardSubFooter{
+border-top-color: transparent !important;
+background: 0 !important;
+bottom: 50px !important;
+height: 40px !important;
+}
+
+.tablist {  background-repeat: no-repeat;
+background-position: center;
+background-image: url('./../img/tablist.png');
+background-size: contain;
+height: 25px;
+background-position: right;
+border:0;
+}
+
+
+.tabmap {
+background-repeat: no-repeat;
+background-position:center;
+background-image: url('../img/tabmap.png');
+background-size: contain;
+height: 25px;
+background-position: left;
+border:0;
+}
+
+
+
+ .tab-title{
+   color:#FEFCFD;
+    height: 115%;
+    display: inline-block;
+    vertical-align: middle;
+ }
+
+.tabhome {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('./../img/tabhome.png');
+  background-size: 25px;
+
+}
+
+
+.tabalerts {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('./../img/tabalerts.png');
+  background-size: 25px;
+}
+
+
+.tabcompare {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('./../img/tabcompare.png');
+  background-size: 25px;
+}
+
+.tabsettings {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('./../img/tabsetting.png');
+  background-size: 25px;
+
+}
+.tabs{
+  background: url('./../img/tabfooterbg.png');
+  -webkit-background-size: cover ;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top:0;
+ }
+.tabs-striped {
+background-color: transparent;
+background-image: none;
+border:0;
+border-top: 1px solid #135413 !important;
+}
+
+.tabs-striped .tabs {
+background-image: url('./../img/tabfooterbg.png');
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+background-size: cover !important;
+border: 0;
+/* border-bottom: 0px !important;
+border-top: 1px solid #355804 !important;
+border-right: 0px !important;
+border-left: 0px !important; */
+border-top: 1px solid #135413 !important;
+padding: 0;
+background-color: transparent !important;
+
+
+}
+.tab-item .icon {
+    display: inline-block;
+    margin: 0 10%;
+    height: 100%;
+    font-size: 32px;
+    width: 30%;
+    margin-right: 3%;
+}
+.tabs-icon-top > .tabs .tab-item, .tabs-icon-top.tabs .tab-item, .tabs-icon-bottom > .tabs .tab-item, .tabs-icon-bottom.tabs .tab-item {
+    font-size: 14px;
+    line-height: 14px;
+    border: 1px solid #5E6659;
+   /* border-top:0;*/ /* change */
+   border-top:2px solid #135413;
+    border-bottom:0;
+    text-align: left;
+}
+.tab-item.tab-item-active {
+ background: none !important;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  margin-top:0;
+  background: #6c9d30;
+  }
+.tabs-striped .tab-item.active{
+	border: 0 !important;
+    border-right: 1px !important;
+    border-style: solid;
+    /* border-width: 2px 0 0 0; */
+    /* border: 2px solid green !important;
+    border-top: 2px solid green !important;
+    border-bottom: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: 2px solid green !important; */
+}
+
+
+ .tab-item.active {
+     border-top: 3px solid #6C9D30 !important;
+     background-color: #6C9D30 !important;
+}
+ .tab-item.activated {
+
+
+}
+
+ .listitem{
+    background: transparent;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 70px;
+    border: 1px solid #8A8C89;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+ .listitemSensorData{
+    background: transparent;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    height: auto;
+    border: 1px solid #8A8C89;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.err{
+	color:#FA421e;
+	font-family: Halvetica_light_neue;
+	line-height: 66px;
+	font-size: 22px;
+}
+.divNestedListContainerDashboard{
+   /* margin-top: 40px; */
+   margin-top: 10px;
+   width: 100%;
+   display: inline-block;
+   font-family: Halvetica_neue_thin;
+}
+
+.item, .item .activated{
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+	background-color: transparent !important;
+}
+.dashboard-new.activated{
+	border:1px solid gray !important;
+}
+
+.listLeftContent{
+    height: 41px;
+  	padding-top: 0px;
+    position: absolute;
+    left: 5%;
+}
+
+#listLeftContent{
+    width: 38%;
+    font-size: 21px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    white-space: initial;
+    overflow-y: auto;
+}
+
+
+.listRightContent{
+     height: 35px;
+    font-size: 8px;
+    width: 51%;
+    position: absolute;
+    right: 10%;
+    word-wrap:break;
+  }
+
+  #listRightContent{
+    position: absolute;
+    right: 5% !important;
+    font-family: Halvetica_light_neue;
+  }
+
+ .offline_text{
+         /* line-height: 1em; */
+      padding-top:3px;
+      font-size: 12px;
+     }
+  .listRightImg{
+    margin-top: 5px;
+  	height: 25px;
+  	width: 10%;
+  	position: absolute;
+  	right: 1%;
+
+}
+
+  .listRightImgDown {
+    background: url(./../img/listDown.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+  .listRightImgUp {
+    background: url(./../img/listUp.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.listRightImgOffline {
+	background: url(./../img/lilstOffline.png) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	background-size: contain;
+	height: 25px;
+}
+
+.activeStationList{
+	border-color:green;
+	background-color:grey;
+}
+
+  .listRightSpanTopTxt{
+  /*color:#96a1aa;*/
+   color:#fff;
+   display: block;
+  /*font-family: Halvetica_light_neue;*/
+    font-size: 11px; /*Added by Arvind*/
+  }
+
+ .listRightSpanBottomTxt{
+	 color:#6d9fc9;
+   font-size: 11px;
+   display: block;
+ }
+
+.listRightSpanBottomTxtRed{
+	 color:#fa421e !important;
+   font-size: 11px;
+   display: block;
+ }
+
+.listDownUpIconRight{
+	width:25px;
+}
+
+
+.stationitemDetails{
+ 	width: 40%;
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px !important;
+    margin-left: 7%;
+    margin-bottom: 10px;
+    height: 80px;
+    border: transparent;
+	border: 1px solid black !important;
+
+}
+
+.stationitemDetailsDashboard {
+    width: 46%;
+    float:left;
+    background: transparent;
+    color: #fff;
+    margin-left: 1%;
+    margin-top:8px !important;
+    margin-bottom: 10px;
+    height: 90px;
+    border: transparent;
+}
+  .dashboard-new {
+    width: 69%;
+    border: 1px solid gray !important;
+    border-radius: 7px;
+    margin: 0;
+    padding: 1%;
+    margin-top: 8px !important;
+}
+li.dashboard-new:nth-child(n+3):nth-child(odd) {
+      width: 49% ;
+      height: 90px;
+
+      border: 1px solid gray !important;
+      border-radius: 7px;
+      margin: 0;
+      padding: 1%;
+      margin-top: 8px !important;
+      margin-right: 2%;
+}
+li.dashboard-new:nth-child(n+3):nth-child(even) {
+      width: 49% ;
+      height: 90px;
+      border: 1px solid gray !important;
+      border-radius: 7px;
+      margin: 0;
+      padding: 1%;
+      margin-top: 8px !important;
+}
+
+ .stationitemDetailsLeftImg{
+    height: 30px;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    background: gray;
+}
+
+.stationitemDetailsLeftImgDashboard{
+    height: 30px;
+    width: 20%;
+    left: 0;
+    bottom: 25px;
+    background: gray;
+}
+.stationitemDetailslistLeftImgIconsDefault {
+     background:transparent;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+  .stationitemDetailslistLeftImgIconsTemprature {
+    background: url(./../img/stationTemperature.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.stationitemDetailslistLeftImgIconsHumidity {
+    background: url(./../img/stationHumidity.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.stationitemDetailslistLeftImgIconsSoilMoisuture {
+    background: url(./../img/stationSoilmoisture.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.stationitemDetailslistLeftImgIconsWindspeed {
+    background: url(./../img/stationWindspeed.png) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+.listDetailCenterContent{
+    height: 40px;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    color:#bfad6a;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 10px;
+
+}
+
+
+.listDetailCenterContentDashboard {
+height: 40px;
+width: 55%;
+margin-left: 21%;
+margin-top: -30px;
+padding-top: 8px;
+color: #bfad6a;
+text-align: center;
+font-size: 35px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+/* border: 1px solid; */
+}
+
+
+
+
+.listDetailRightContent{
+    height: 40px;
+    width: 20%;
+    position: absolute;
+    right: 20%;
+  }
+
+  .listDetailRightContentDashboard{
+    height: 40px;
+    width: 20%;
+   /* position: absolute; */
+    margin-left: 78%;
+    margin-top: -40px;
+  }
+
+  .listDetailArrowTop{
+    height: 30px;
+    width: 25%;
+    position: absolute;
+    right: -7px;
+   /*  background:gray; */
+    top:-6px;
+  }
+
+  .listDetailArrowTopDashboard{
+    height: 15px;
+    width: 55%;
+  }
+
+  .stationitemDetailslistRightImgIcons {
+/*     background: url(./../img/stationsensorarrowdown.png) no-repeat center center; */
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+  .listDetailSymbolBottom{
+    height: 20px;
+    width: 25%;
+    position: absolute;
+    color:#bfad6a;
+    right: 0;
+    bottom: 0;
+  }
+
+  .listDetailSymbolBottomDashboard{
+    height: 20px;
+    width: 60%;
+   /* position: absolute;*/
+    color:#bfad6a;
+    right: 0;
+    bottom: 0;
+  }
+
+.listDetailFooterContent{
+    height: 20px;
+    width: 90%;
+     position: absolute;
+    left: 5%;
+    font-size:small;
+    text-align: center;
+    bottom: 0;
+    color: #ffffff;
+}
+
+.listDetailFooterContentDashboard{
+    height: 40px;
+    width: 90%;
+    /* position: absolute; */
+    margin-left: 5%;
+    font-size:small;
+    text-align: center;
+    margin-top:5px;
+    bottom: 0;
+    color: #ffffff;
+}
+
+.divListIonItemContainer:last-child {
+    margin-bottom:50px;
+}

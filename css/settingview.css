@@ -1,0 +1,144 @@
+.setingContent .scroll{
+height: 95%;
+font-family: Halvetica_light_neue;
+}
+.listStationsConfigrContainer{
+position: absolute;
+width: 92%;
+left: 3%;
+margin-top: 5%;
+overflow: auto;
+font-size: 16px;
+height: 55%;
+}
+.liContainerDiv:before{
+content:"• ";
+}
+.liContainerDiv{
+border: 0;
+padding: 2%;
+padding-left:1%;
+}
+.themeContentConfigStation{
+overflow-x: hidden;
+}
+.divLiAlertsConfigurStationSMPg {
+height: 40px;
+width: 101%;
+font-size: 16px;
+min-height: 40px;
+margin-bottom: 3%;
+margin-top: 0%;
+}
+
+.divLiAlertsConfigurStationSMPgT2 {
+height: 40px;
+width: 101%;
+font-size: 16px;
+min-height: 40px;
+margin-bottom: 3%;
+margin-top: 0%;
+}
+.receive_noti{
+margin: 0 0 2% 0;
+}
+/*Org list page  */
+
+.org-list{
+border-bottom: 1px solid #E1E7EA;
+font-family: Halvetica_light_neue;
+font-size: 16px;
+color: #3a3a3a;
+width: 90%;
+margin: auto;
+}
+
+/*************************** station list for Select station  page  ********************************/
+.settings_list{
+color: #3a3a3a;
+font-family: Halvetica_light_neue;
+font-size: 18px;
+margin:5% 2% 1% 4%;
+padding: 1%;
+}
+.settings_list li{
+height: 40px;
+padding: 1%;
+margin: 2% 0 5% 0;
+border-bottom: 1px solid #E1E7EA;
+}
+.settings_list li:last-child{
+border-bottom: none;
+}
+.station_li{
+height: 45px;
+font-size: 17px;
+}
+.settings_list li.activated{
+background:transparent;
+}
+/*ServerUrl setting pageCSS*/
+.settingConfigServerContent{
+overflow:hidden;
+}
+/*  .select_box{
+float: right;
+width: 29%;
+font-family: Halvetica_light_neue;
+padding: 0px;
+font-size: 4.3vw;
+padding-left: 2%;
+color: #072144;
+background-color: #DCE2E8;
+} */
+.serverConfigInputText{
+color:#000000 !important;
+background-color: transparent !important;
+}
+input[type="text"] + .serverConfigInputText{
+color:#000000;
+/*border-bottom: 1px solid gray;*/
+}
+.divInputContainerConfigServierClass{
+margin-top: 25%;
+}
+.divButtonContainerConfigServerClass{
+margin-top: 5%;
+}
+.lineClassConfigPg{
+width: 80%;
+margin-top: 0;
+}
+.custom-popup .popup{
+    border-radius: 14px;
+}
+.custom-popup .popup-head {
+    padding: 0;
+    border-bottom: none;
+    
+}
+.custom-popup .popup-body {
+    padding: 14px;
+    padding-bottom: 0;
+}
+.custom-popup-title{
+color: #214060;
+font-weight: bold;
+}
+.custom-popup-buttons{
+  text-align: right;
+    
+}
+.custom-popup-buttons .button{
+color: #499EBD;
+padding: 0 4px;
+font-size: 14px;
+}
+.custom-popup-input{
+    background: transparent;
+    border-bottom: 1px solid #499EBD !important;
+    color: #000 !important;
+}
+ .popup-container.custom-popup{
+bottom: 25% !important;
+}

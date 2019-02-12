@@ -1,0 +1,100 @@
+.platform-android .popover,.platform-ios .popover {
+    margin-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.platform-ios .popover {
+    margin-top: -5%;
+}
+.popover{
+    /* height: 140px;
+    width: 63%;
+    left: 33%; */
+    min-height: 130px;
+    height: 20%;
+    width: 64%;
+}
+.platform-ios .popover-arrow{
+    display: none;
+}
+.popup-item{
+	color: #fff;
+	background: transparent;	
+	font-size: 16px;
+}
+
+.button.icon:before, .button.icon-left:before, .button.icon-right:before {
+    display: inline-block;
+    padding: 0 0 1px 0;
+    vertical-align: inherit;
+    font-size: 24px;
+    /* line-height: 41px; */
+    pointer-events: none;
+}
+.popup-item-container{
+    position: absolute;
+    font-size: 21px;
+    font-family: Halvetica_light_neue;
+    color: #fff;
+    top: 21%;
+    left: 3%;
+}
+.popup-item-container .row{
+    align-items: center;
+}
+.popup-lg-item-container{
+    position: absolute;
+    font-family: Halvetica_light_neue;
+    color: #fff;
+    top: 0;
+    left: 1%;
+    padding: 7% 9% 2% 9%;
+    margin-top: 46%;
+}
+.email-input{
+    background: #dde3e7;
+    margin-bottom: 3%;
+}
+.email-input input{
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    color: #002348 !important;
+}
+.send-mail-button{
+    border-radius: 50px;
+    width: 40%;
+    background: #214060;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Halvetica_light_neue;
+    line-height: 40px;
+    min-height: 40px;
+}
+.send-mail-button.activated{
+      border-radius: 50px;
+    width: 40%;
+    background: #214060;
+    background-color: #214060 !important;
+    border-top-color: transparent !important;
+
+}
+.tip{
+    color:#6d9fc9;
+    letter-spacing: 2px;
+}
+.email-input input ::-webkit-input-placeholder {
+  color: #002348 !important;
+}
+.export-popup{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50%;
+    }
+.email-backdrop{
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+}
+

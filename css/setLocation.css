@@ -1,0 +1,38 @@
+.labellat{
+  float: left;
+  padding: 5%;
+}
+.inputlat{
+  float: right;
+  color:#000;
+}
+.table_label{
+  display: table;
+  padding: 1.5%;
+  float:left;
+  width: 30%;
+  font-family: Halvetica_light_neue;
+  font-size: 15px;
+}
+.table_input{
+  display: table;
+  float: right;
+  width:65%;
+  font-family: Halvetica_light_neue;
+  font-size: 15px;
+  color:#6795EF !important
+}
+.table_cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+#save_button{
+margin: auto;
+font-size: 16px;
+padding: 0%;
+width: 40%;
+margin-top: -11px;
+}
+/*.save_button:{
+  background: #d3d3d3;
+}*/

@@ -1,0 +1,145 @@
+
+.mapContent{
+	overflow-y:hidden;
+}
+.map_tab_hidden_background{
+	position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 4%;
+    background:transparent;
+}
+.map_header_hidden_background{
+	position: absolute;
+    right: 2%;
+    height: 7%;
+    width: 24%;
+    border-radius: 50%;
+    top: 2%;
+    background:transparent;
+}
+.mapContent .scroll{
+  height:100%;
+  width:100%;
+  overflow-y:auto;
+ }
+ 
+.mapPageImg {
+background-image: url('./../img/mappgbg.jpg') !important; 
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+background-size: cover !important;
+}
+
+
+.mapdashBoardHeader{  
+background-image: url('./../img/mapHeaderFooterBg.png') !important;
+-webkit-background-size: 100% !important;
+-moz-background-size: 100% !important;
+background-size: 100% ;
+background-repeat: no-repeat;
+background-color: transparent;
+height: 60px;
+margin:0;
+padding:0;
+}
+
+.mapdashBordHeaderMapButton {
+background-image: url('./../img/dashboardheader.png') !important;
+-webkit-background-size:  100%  !important;
+-moz-background-size: 100% 100%!important;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+position: absolute;
+width: 98%;
+left: 1%;
+margin: 0 !important;
+padding: 0 !important;
+height: 36px;
+top: 20% !important;
+}
+
+
+
+.mapdashBordHeaderMapOnIcon {
+position: relative;
+float: right;
+/* width: 80px;
+right: 3px !important;
+top: 1px !important; */
+    width: 70px;
+    right: 3px !important;
+    top: 2.8px !important;
+}
+
+._gmaps_cdv_ {
+margin: 0 !important;
+padding: 0 !important;
+background: transparent !important;
+}
+
+.mapFooterTabclass {
+	
+background-image: url('./../img/mapHeaderFooterBg.png') ;
+-webkit-background-size: cover !important;
+-moz-background-size: cover !important;
+background-size: cover !important;
+border: 1px solid #355804;
+border-bottom: 0px !important;
+border-top: 1px solid #355804 !important;
+border-right: 0px !important;
+border-left: 0px !important;
+padding: 0;
+background-color: transparent !important;
+
+}
+
+
+.tablistonmap {  
+background-repeat: no-repeat;
+background-position: center;
+background-image: url('./../img/tablistonmap.png');
+background-size: contain;
+height: 25px;
+background-position: right;
+border:0;
+}
+
+
+.tabmaponmap {
+background-repeat: no-repeat;
+background-position:center;
+background-image: url('./../img/tabmaponmap.png');
+background-size: contain;
+height: 25px;
+background-position: left;
+border:0;
+}
+
+ 
+#map {
+width: 100%;
+height: 100%;
+}
+
+.foot{
+bottom: 51px !important;
+}
+
+.headers{
+top: 0px !important;
+}
+
+#map_canvas {
+width: 100% !important;
+height: 100% !important;
+}
+
+a[href^="https://maps.google.com/maps"]{
+	display:none !important
+	}
+.gm-style-cc {
+	display:none; 
+}
+
+   

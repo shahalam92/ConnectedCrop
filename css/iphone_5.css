@@ -1,0 +1,249 @@
+@media 
+    only screen
+    and (max-device-width: 615px) 
+    and (-webkit-device-pixel-ratio: 2){
+    .popup-item-container{
+        font-size: 19px;
+    }
+    /* .calender-selector{
+        width: 51%;
+        margin-top: 8%;
+     }
+     .chart-days{
+        font-size: 14px;
+        width: 22.8%;
+    }
+    .chart-days:nth-child(3){
+        font-size: 14px;
+        width: 23.8%;
+    } */
+    .width-40{
+        width: 38%;
+    }
+}
+
+@media 
+    only screen and (min-device-width: 320px) 
+    and (max-device-width: 480px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (device-aspect-ratio: 2/3){
+    .sensor-reading-container{
+        line-height: 35px;
+        font-size: 42px;
+     }
+     .asset-comm .comm-heading{
+        font-size: 10px;
+        }
+    .sensor-error-font{
+        font-size: 15px;
+     }   
+     .please,.Please{
+        line-height: 15px;
+    
+    } 
+    .popup-item-container{
+        font-size: 17px;
+        top: 17%;
+        left: 3%;
+    }
+    .threshold_error{
+        width: 85%;
+        margin-left: 20%;
+    }
+    .threshold_error .danger_icon {
+        width: 7%;
+        display: inline-block;
+        margin-top: 7%;
+        margin-left: 13%;
+    }
+    .threshold_error .validation_message {
+        padding-left: 2%;
+        display: inline-block;
+        width: 70%;
+        line-height: 1em;
+        padding-top: 5%;
+    }
+    .notification-error{
+        width: 90%;
+        margin-left: 10%;
+    }
+    .threshold .font-16-res {
+        font-size: 12.5px !important;
+    }
+    .export-popup{
+        width: 94%;
+        margin-left: 3%;
+    }
+    .popup-item-container{
+        font-size: 17px;
+        top: 17%;
+        left: 3%;
+    }
+    .iphone_5_error_history_font{
+        font-size: 12px;
+    }
+     /* .calender-selector{
+        width: 51%;
+        margin-top: 10%;
+     }
+     .chart-days{
+        font-size: 14px;
+        width: 22.8%;
+    }
+    .chart-days:nth-child(3){
+        font-size: 14px;
+        width: 23.8%;
+    } */
+    .width-40{
+        width: 38%;
+    }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
+{
+ .sensor-reading-container{
+    line-height: 35px;
+    font-size: 42px;
+ }
+ .asset-comm .comm-heading{
+    font-size: 10px;
+    }
+.sensor-error-font{
+    font-size: 15px;
+ }   
+ .please,.Please{
+    line-height: 15px;
+
+}
+.popup-item-container{
+    font-size: 17px;
+    top: 17%;
+    left: 3%;
+}
+.threshold_error{
+    width: 85%;
+    margin-left: 20%;
+}
+.notification-error{
+    width: 90%;
+    margin-left: 10%;
+}
+.threshold_error .danger_icon {
+    width: 7%;
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 13%;
+}
+.threshold_error .validation_message {
+    padding-left: 2%;
+    display: inline-block;
+    width: 70%;
+    line-height: 1em;
+    padding-top: 5%;
+}
+.threshold .font-16-res {
+    font-size: 12.5px !important;
+}
+.export-popup{
+    width: 94%;
+    margin-left: 3%;
+}
+.iphone_5_error_history_font{
+    font-size: 12px;
+}
+/* .calender-selector{
+    width: 51%;
+    margin-top: 10%;
+ }
+ .chart-days{
+    font-size: 14px;
+    width: 22.8%;
+}
+.chart-days:nth-child(3){
+    font-size: 14px;
+    width: 23.8%;
+} */
+
+.width-40{
+    width: 38%;
+}
+}
+@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+    .sensor-reading-container{
+        line-height: 35px;
+        font-size: 42px;
+     }
+     .asset-comm .comm-heading{
+        font-size: 10px;
+        }
+    .sensor-error-font{
+        font-size: 15px;
+     }   
+     .please,.Please{
+        line-height: 15px;
+    
+    }
+    .popup-item-container{
+        font-size: 17px;
+        top: 17%;
+        left: 3%;
+    }
+    .threshold_error{
+        width: 85%;
+        margin-left: 20%;
+    }
+    .notification-error{
+        width: 90%;
+        margin-left: 10%;
+    }
+    .threshold_error .danger_icon {
+        width: 7%;
+        display: inline-block;
+        margin-top: 7%;
+        margin-left: 13%;
+    }
+    .threshold_error .validation_message {
+        padding-left: 2%;
+        display: inline-block;
+        width: 70%;
+        line-height: 1em;
+        padding-top: 5%;
+    }
+    .threshold .font-16-res {
+        font-size: 12.5px !important;
+    }
+    .export-popup{
+        width: 94%;
+        margin-left: 3%;
+    }
+    .iphone_5_error_history_font{
+        font-size: 12px;
+    }
+    /* .calender-selector{
+        width: 51%;
+        margin-top: 9.2%;
+     }
+     .chart-days{
+        font-size: 14px;
+        width: 22.8%;
+    }
+    .chart-days:nth-child(3){
+        font-size: 14px;
+        width: 23.8%;
+    } */
+    .width-30{
+        width: 28%;
+    }
+    .width-40{
+        width: 38%;
+    }
+}
+
+/* @media (device-height : 568px) 
+and (device-width : 320px) 
+and (-webkit-min-device-pixel-ratio: 2){
+    .export-popup{
+        width: 94%;
+        margin-left: 3%;
+    }
+} */

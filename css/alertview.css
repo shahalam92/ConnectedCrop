@@ -1,0 +1,198 @@
+
+
+.alertPageImg {
+    background-image: url('./../img/alertsPgBg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.time-update_DIV{
+  	height: 60px;
+    width: 100%;
+    margin: auto;
+    font-family: Halvetica_light_neue;
+    text-align: center;
+}
+.reload_icon{
+	background: url('./../img/events/refresh.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: contain;
+    height: 16px;
+    width: 4vw;
+    display: inline-block;
+    vertical-align: sub;
+}
+@-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(-360deg); }
+}
+
+@keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+}
+.lastUpdate{
+	color: #96a1aa;
+    display: inline-block;
+    font-size: 16px;
+    margin-top:9%;
+    margin-left: 2%;
+}
+.relative-time{
+	color: #6d9fc9;
+    font-size: 17px;
+    padding-left: 2%;
+    display: inline-block;
+
+}
+.text-align-div{
+	display: table-cell;
+	vertical-align: middle;
+}
+.list-item{
+	padding: 1% 0 1% 0;
+    height: auto;
+}
+.message-div{
+	font-size: 14px;
+
+}
+.list-item:first-child {
+   border-top: none;
+}
+.list-item_DATE{
+    display: table;
+    float: left;
+    height: 100%;
+}
+.list-item_MSG{
+	  height: auto;
+    width: 82%;
+    float: left;
+    display: table;
+    margin-left:2%;
+    margin-top:8%;
+    white-space: initial;
+}
+.list-item_ParentDIV{
+	width: 92%;
+   margin:auto;
+   font-family:Halvetica_light_neue;
+}
+.list-item_childDIV_left{
+	  width: 67%;
+    float: left;
+    height: auto;
+}
+.list-item_childDIV_right{
+	  float: right;
+    width: 33%;
+    height: 80px;
+}
+
+.list-item_IMG1{
+	height: 80px;
+    width: 15%;
+    float: left;
+
+}
+.list-item_IMG2{
+    height: 80px;
+    width: 30%;
+    float: right;
+
+}
+.inversion-icon{
+	background: url(./../img/events/temperature_red_top.png) no-repeat center ;
+   -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.dry-soil-icon{
+	background: url(./../img/events/soil_dry_icon.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.wet-soil-icon{
+	 background: url(./../img/events/soil_too_wet.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.dry-soil-warning-icon{
+	background: url(./../img/events/dry_soil_warning.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.wet-soil-warning-icon{
+	background: url(./../img/events/wet_soil_warning.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+
+.high-temp-icon{
+	background: url(./../img/events/very_high_temperatur.png) no-repeat center ;
+    -webkit-background-size: 76%;
+   	-moz-background-size: 76% ;
+    background-size: 76% ;
+
+}
+.low-temp-icon{
+	background: url(./../img/events/very_low_temperatur.png) no-repeat center ;
+    -webkit-background-size: 76%;
+   	-moz-background-size: 76% ;
+    background-size: 76% ;
+
+}
+.bad-connection-icon{
+	background: url(./../img/events/bad_connection.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.low-battery-icon{
+  	background: url(./../img/events/low_battery.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.high-frequency-icon{
+	 background: url(./../img/events/frequency.png) no-repeat center ;
+    -webkit-background-size: 74%;
+   	-moz-background-size: 74% ;
+    background-size: 74% ;
+
+}
+.update-scheduled-icon{
+	   background: url(./../img/events/scheduled.png) no-repeat center ;
+    -webkit-background-size: 84%;
+   	-moz-background-size: 84% ;
+    background-size: 84% ;
+
+}
+.update-success-icon{
+  	background: url(./../img/events/success.png) no-repeat center ;
+    -webkit-background-size: 74%;
+   	-moz-background-size: 74% ;
+    background-size: 74% ;
+
+}
+.update-failure-icon{
+  	background: url(./../img/events/delete.png) no-repeat center ;
+    -webkit-background-size: 65%;
+   	-moz-background-size: 65% ;
+    background-size: 65% ;
+
+}

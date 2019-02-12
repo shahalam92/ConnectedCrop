@@ -1,0 +1,355 @@
+.license_div{
+width: 78%;
+margin: auto;
+border-radius: 0;
+background-color: rgba(255,255,255,0.2);
+padding: 5% 5%;
+margin-top: 5%;
+margin-bottom: 5%;
+color: #bfbfbf;
+}
+.version{
+color: white;
+position: absolute;
+width: 100%;
+padding-bottom:0.1%;
+bottom:0;
+text-align: center;
+}
+.password_log,.org_log,.email_log,.fname_log,.lname_log,.phone_log ,.temp_low_log,.temp_high_log,.fieldCapacityValue,.wiltingPointValue
+,.highSoilMoisValue,.lowSoilMoisValue {
+	display: none;
+	font-family: Halvetica_light_neue;
+	color:#F2F4F3;
+}
+
+.danger_icon_signup{
+	width: 7%;
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 14%;
+}
+.validation_message{
+	padding-left: 3%;
+    display: inline-block;
+    width: 69%;
+    line-height: 1em;
+    padding-top: 5%;
+}
+.error_div_signup{
+	height: 55px;
+    width: 66%;
+    margin-left: 11%;
+    padding: 1%;
+    background: url(./../img/incorrectPass.png) no-repeat center;
+    -webkit-background-size: 80%;
+    -moz-background-size: 80%;
+    background-size: 80%;
+    z-index: 200;
+    margin-top: -2%;
+}
+
+.error-div{
+    height: 55px;
+    width: 66%;
+    margin-left: 17%;
+    padding: 1%;
+    background: url(./../img/incorrectPass.png) no-repeat center;
+    -webkit-background-size: 80%;
+    -moz-background-size: 80%;
+    background-size: 80%;
+    z-index: 200;
+    margin-top: -4%;
+}
+.font_style{
+	font-family:Halvetica_light_neue;
+	font-size: 18px;
+}
+.forgot_password{
+	width:100%;
+	text-align: center;
+	padding: 1%;
+	display: inline-block;
+	color: #FEFFFF;
+  font-family: Halvetica_Rounded;
+  margin-top: 1%;
+	/*margin-bottom: 3%;*/
+
+
+}
+.demoLoginPageImg {
+    background-image: url('./../img/loginpgbg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.loginInputTextUserIcon {
+    background-image: url('./../img/loginuserIcon.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.loginInputTextLockIcon {
+    background-image: url('./../img/loginlockIcon.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.loginlogoImg{
+	width:55%;
+	margin-top: 7%;
+}
+
+.loginLabel{
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #ffffff;
+    left: 10%;
+    width: 80%;
+    background-color: transparent;
+    color: #ffffff;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.loginLabelSpan{
+	text-align:left;
+}
+.danger_icon{
+	width: 7%;
+    display: inline-block;
+    margin-top: 9%;
+    margin-left: 15%;
+}
+#password_error{
+	display: inline-block;
+    margin-left: 5%;
+    color:#F2F4F3;
+    font-family: Halvetica_light_neue;
+    width: 63%;
+}
+#email_error{
+	display: inline-block;
+    margin-left: 5%;
+    color:#F2F4F3;
+    font-family: Halvetica_light_neue;
+}
+.loginPgText{
+    color: #ffffff;
+    font-size: 1.9em;
+    font-weight: 100;
+    padding-bottom: 5%;
+    text-align: left;
+	  padding-left: 12%;
+}
+.loginHeader{
+	padding-left: 0;
+	text-align: center;
+}
+
+.loginInputPlaceholderIcon{
+	width:12px;
+    margin-left: -15px;
+    margin-bottom: -2px;
+}
+.platform-ios .loginInputPlaceholderIcon {
+    width: 12px;
+    margin-left: -15px;
+    margin-bottom: 0;
+}
+ .server-list {
+font-size: 13.5px;
+}
+.settingInputPlaceholderIconSMS{
+	width: 8px;
+	margin-left: -15px;
+	margin-bottom: -2px;
+}
+
+input[type="email"], .loginInputText{
+	color:#fff;
+}
+
+input[type="text"], .loginInputText{
+	color:#fff;
+}
+
+input[type="password"], .loginInputPassword{
+	color:#fff;
+}
+
+
+
+ .loginSubmit{
+  background: transparent;
+  border: transparent;
+  padding-bottom: 0px;
+}
+
+
+#signInBtn{
+ color: #FFFFFF;
+ background-image: url('./../img/signInBtnBg.png');
+ -webkit-background-size: contain;
+ -moz-background-size: contain;
+ background-repeat: no-repeat;
+ background-size: contain;
+ border: transparent;
+ background-color: transparent;
+ width: 100%;
+ /* text-align: center; */
+ background-position: center !important;
+}
+
+
+#signInBtn , #signInBtn .activated{
+	background-color: transparent;
+}
+ .cardLoginpage{
+ margin-top:7%;
+ padding: 0;
+ background-color: rgba(255,255,255,0.1);
+ border-radius:5px;
+ color: #fff;
+ text-align: center;
+ margin-left: 3%;
+ margin-right: 3%;
+  }
+
+.cardTitleLoginpg{
+ background-color: transparent !important;
+  color: #fff;
+  border: transparent;
+  margin:0;
+  padding: 2%;
+  font-size: 16px;
+}
+
+ .bgColorTransparent{
+  background-color: transparent !important;
+  color: #fff;
+  border: transparent;
+}
+
+.itemTextBlockColor{
+  margin:0;
+  padding:0;
+  font-size: inherit;
+}
+
+
+.listMap{
+ 	height: 30px;
+	width: 36px;
+ }
+
+.spanHoldListMap{
+ 	position: absolute;
+	right: -3px;
+	top: 13px;
+	z-index: 1000;
+
+ }
+
+.divSettingButtonLoginpgContainer{
+position: absolute;
+right: 0;
+margin-top: 3%;
+width: 20%;
+}
+
+.imgSettingClassLoginpg{
+  width: 25px;
+  position: absolute;
+  right: 12%;
+ }
+
+.unit-pref{
+  margin-top: 10px;
+}
+.loginLabel .item-content{
+    background: transparent !important;
+    background-color: transparent !important;
+        padding: 5% 5px 1% 8px;
+}
+
+/*
+ .item-icon-left i {
+    left: -80%;
+    padding:0 !important;
+    right: auto;
+    color: #1515ca!important;
+}*/
+
+/* .item-radio input ~ .radio-icon {
+    visibility: visible !important;
+}
+
+ .item-radio > .radio-icon:before {
+    content: "\2B58" !important; 
+}
+
+ .item-radio > input[type=radio]:checked ~ .radio-icon:before {
+    content: "\1F534" !important; 
+}
+*/
+
+.platform-android .radio-icon, .platform-ios .radio-icon{  visibility: visible !important;}
+
+.item-radio .radio-icon {
+   right: 86%;
+}
+.platform-android .radio-icon:before{
+   position: absolute !important;
+  right: 28% !important;
+  top: 37% !important;
+  content:"" !important;
+  border:1px solid black !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  overflow:hidden !important;
+}
+
+
+.platform-android .radio-icon:after, .platform-ios .radio-icon:after{
+  content:"" !important;
+  position: absolute !important;
+  right: 28% !important;
+  top: 37% !important;
+  /*background: black !important;*/
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  overflow:hidden !important;
+  transition: -webkit-transform .28s cubic-bezier(0.420, 0.000, 0.000, 1.650);
+  transition: transform .28s cubic-bezier(0.420, 0.000, 0.000, 1.650);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+/*.item-radio input:checked ~ .item-content {
+background: #F7F7F7;
+}*/
+
+.item-radio input:checked + .radio-content .radio-icon:after{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.radio-positive .radio-icon:after{
+  /*background: transparent !important;*/
+    background-image: url(./../img/menu/yes.png)  !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.radio-positive .radio-icon:before{
+  border-color: transparent !important;
+  background-image: url(./../img/menu/no.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

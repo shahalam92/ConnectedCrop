@@ -1,0 +1,18 @@
+
+.liStationListpg{
+   padding: 10px !important;
+   border: 0 !important;
+   background: transparent;
+   color: #000;
+
+}
+#divlistContainerSelectStationpg{
+	position: absolute !important;
+	top: 1%;
+	bottom: 0;
+	height: 98%;
+	margin: 0;
+	padding: 0;
+	width: 90%;
+	left: 5%;
+}

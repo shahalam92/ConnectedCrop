@@ -1,0 +1,300 @@
+.background{
+background: #fff;
+}
+.comparePageImg {
+background-image: url('./../img/compareStationsPgBg.jpg'); 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+}
+
+.comparePageContent{
+margin-top: 2%;
+}
+.has-subFooterComparePg {
+bottom: 150px;
+}
+
+.subFooterComparePg {
+height: 100px;
+background: url(./../img/compareSubFooterbg.jpg) !important;
+-webkit-background-size: 100% 100% !important; 
+-moz-background-size: 100% 100% !important;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.bar-subfooter {
+bottom: 50px;
+
+}
+
+#btnCompareStsnPg {
+color: #FFFFFF;
+background-image: url('./../img/compareBtnBg.png') !important;
+-webkit-background-size: 100% !important;
+-moz-background-size: 100% !important;
+background-repeat: no-repeat;
+background-size: 100% !important;
+border: transparent;
+background-color: transparent;
+width: 80%;
+text-align: center;
+background-position: center !important;
+}
+
+
+.btnCompareStaionPg{
+border: 1px solid;
+width: 80%;
+height: 50px;
+font-size: 19px !important;
+}
+
+
+.divComingSoonContainer{
+position: absolute;
+width: 100%;
+height: 100%;
+align-content: center;
+}
+
+.imgComingSoonClass{
+width: 100%;
+}
+
+
+
+.stationListitemComparePg {
+background: transparent;
+color: #000;
+margin-left: 10px;
+margin-right: 10px;
+padding: 0;
+padding-top: 20px;
+padding-bottom: 20px;
+height: 70px;
+font-style: normal;
+border: 1px solid #E1E1E1;
+border-left-color: transparent;
+border-right-color: transparent;
+}
+
+.listitemComparePg {
+background: transparent;
+color: #000;
+margin-left: 10px;
+margin-right: 10px;
+padding: 0;
+/* padding-top: 20px; */
+padding-top: 14px;
+padding-bottom: 20px;
+/* height: 70px; */
+height:62px;
+font-style: normal;
+border-bottom: 1px solid #E1E1E1;
+border-left-color: transparent;
+border-right-color: transparent;
+color: #96a1aa;
+}
+
+.listitemSensorDataComparePg {
+background: transparent;
+color: #000;
+margin-left: 10px;
+margin-right: 10px;
+padding: 0;
+padding-top: 15px;
+/* padding-top: 20px; */
+/* padding-bottom: 20px; */
+height: auto;
+font-style: normal;
+border-bottom: 1px solid #E1E1E1;
+border-left-color: transparent;
+border-right-color: transparent;
+}
+
+#stationListLeftCntntCmprPg {
+width: 50%;
+left: 15%;
+font-size: 15px !important;
+white-space: nowrap;
+white-space: initial;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.stationLstRightCntntCmprPg {
+height: 30px;
+font-size: 10px;
+width: 30%;
+margin-top: -5px;
+position: absolute;
+right: 10%;
+word-wrap: break;
+}
+
+.stationListLeftImgDownCmprPg {
+background: url(./../img/cmprPgLstUnselected.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+}
+
+.stationListLeftImgUpCmprPg {
+background: url(./../img/cmprPgLstSelected.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+}
+
+.stationListLeftImgOfflineCmrPg{
+background: url(./../img/cmprPgLstOffline.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+}
+
+.stationListLeftImgCmprPg {
+height: 30px;
+width: 10%;
+position: absolute;
+left: 0;
+}
+
+.stationLstItemsCmprPg {
+width: 80%;
+display: inline-block;
+background: transparent;
+color: #fff;
+padding-top: 20px;
+padding-bottom: 10px !important;
+margin-left: 7%;
+margin-bottom: 10px;
+height: 50px;
+border: transparent;
+border: 1px solid black;
+}
+
+.stationLstItemDetailsCmprPg {
+width: 85%;
+background: transparent;
+color: #000;
+margin-left: 7%;
+height: 60px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+border: none;
+/* border: 1px solid; */
+}
+
+.stationListItemDetailCenterContent {
+height: 40px;
+width: 60%;
+position: absolute;
+left: 20%;
+color: #000;
+font-size: 15px;
+}
+
+
+.sensorListLeftImgCmprPg {
+height: 20px;
+width: 10%;
+position: absolute;
+left: 0;
+}
+
+
+.compareListItems{
+width:80%;
+position: relative;
+left: 13%;
+}
+
+.stationLstItemDetailsCmprPg input[type="checkbox"] + span:BEFORE{
+display: inline-block;
+margin-right: 5px;
+content: "";
+background: url(./../img/cmprPgLstUnselected.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+background-size: contain;
+height: 30px;
+width: 10%;
+margin-bottom: -3%;
+}
+
+.stationLstItemDetailsCmprPg input[type="checkbox"]:checked + span:BEFORE{
+display: inline-block;
+margin-right: 5px;
+content: "";
+background: url(./../img/cmprPgLstSelected.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+background-size: contain;
+height: 30px;
+width: 10%;
+margin-bottom: -3%;
+}
+
+.compareStationListCheckbox{
+visibility: hidden;
+}
+
+/******************************* Nested New list 31 Aug 2016  ********************************/
+
+#listLeftContentComparePg {
+left: 17%;
+width: 40%;
+font-size: 15px !important;
+white-space: initial;
+overflow: hidden;
+text-overflow: ellipsis;
+margin-top: 1%;
+
+}
+
+.listLeftImgComparePg {
+height: 30px;
+width: 10%;
+position: absolute;
+left: 5%;
+}
+
+.listLeftImgUpComparePg {
+background: url(./../img/listUp.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+}
+
+.listLeftImgDownComparePg {
+background: url(./../img/listDown.png) no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+background-size: contain;
+}
+
+
+#listRightContentComparePg {
+position: absolute;
+margin-top: 1%;
+right: 0;
+}
+
+.listRightContentComparePg {
+height: 41px;
+font-size: 14px;
+width: 35%;
+position: absolute;
+}
+
+
+.divListIonItemContainerCompagePg:nth-last-child(1){
+hight:auto;
+}
+

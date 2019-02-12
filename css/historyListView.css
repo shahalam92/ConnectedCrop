@@ -1,0 +1,64 @@
+
+
+.topLineContainerDivHistoryPg {
+position: absolute !important;
+text-align: center;
+width: 100%;
+top: 2%;
+min-height: 15px;
+height: 5%;
+
+}
+
+.topLineTxtColorHistoryPg {
+color: #FFF;
+}
+
+.divlistContainerHistorypg{
+position: absolute !important;
+top: 0 !important;
+bottom: 0;
+height : 98%;
+margin: 0;
+padding: 0;
+width: 99%;
+left: 1%;
+}
+
+.liHeaderForDate{
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom:10px;
+border: 1px solid white;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+}
+
+.liHeaderForDateSingleHeader{
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom:10px;
+border: 1px solid white;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+}
+
+
+.liHistoryListpg{
+padding:10px !important;
+border: 0 !important;
+background: transparent;
+color: #fff;
+width: 100% !important;
+
+
+}
+.line_seperator{
+	border-bottom: 2px solid gray;
+	margin-top: -3%;
+}
+ 

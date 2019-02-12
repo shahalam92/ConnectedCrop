@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.about_root_div{
+	    padding: 14% 8% 0% 8%;
+	    font-family: Halvetica_light_neue;
+	    font-size: 15px;
+	    line-height: 1.5em;
+}
+.aboutlogo{
+		width:100%;
+}
+.version_text{
+		font-size:14px;
+}
+
+.about_text_div{
+	    padding: 10% 0% 2% 0%;
+}
+

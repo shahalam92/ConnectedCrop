@@ -1,0 +1,124 @@
+
+.header-icon{
+
+    background-image: url('./../img/events/head_Bg.png') !important;
+    -webkit-background-size: 100% ;
+    -moz-background-size: 100%  ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    left: 0;
+    
+    
+    }
+    .line-image{
+    background-image: url('./../img/chart-line.png');
+    -webkit-background-size:  88vw 54vh;
+    -moz-background-size:  88vw 54vh;
+    background-size: 88vw 54vh;
+    background-repeat: no-repeat;
+    background-position: 10vh 19vw;
+    }
+    .chart-unit{
+    top: 30% !important;
+    position: absolute;
+    left: 10%;
+    color: #fff;
+    }
+    .chart-icon{
+    height: 19px;
+    top: 30% !important;
+    width: 6%;
+    position: absolute;
+    left: 0%;
+    
+    }
+    .chart_station-name-DIV{
+        border-right: 1px solid #656363;
+        padding-right: 2%;
+        height: 30px;
+        margin-top: 3.5px;
+    
+    }
+    .chart_sensor-name-DIV{
+        padding-left: 2%;
+        height: 30px;
+        margin-top: 3.5px;
+    }
+    .sensorGraphPageImg {
+    background-image: url('./../img/graph_bg.jpg') !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    }
+    .chart-days{
+    font-size: 14px;
+    width: 23%;
+    }
+    .chart-days.activeButtonClass{
+    font-size: 14px;
+    padding: 4px;
+    /* background-color: rgba(19, 18, 18, 0.81) !important;
+     */
+     background-color: rgba(113, 112, 112, 0.55) !important;
+    /* background-color: #576D2F  !important; */
+    border-radius: 16px;
+    }
+    
+    .last-com-text{
+    /* width: 50%;
+    float: right;
+    text-align: right;
+    padding-right: 5%;
+    font-size: 13px;
+    padding-top: 12px;
+    line-height: 1.2em; */
+    width: auto;
+    float: right;
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.2em;
+    margin-top: 12px;
+    margin-right: 4%;
+    padding-left: 8px;
+    
+    }
+    .last-com-date{
+    /* float: right; */
+    width: 100%;
+    text-align: right;
+    padding-right: 5%;
+    line-height: 1em;
+    }
+    .detection-time{
+    width: 42%;
+    float: right;
+    margin-top: 8%;
+    }
+    .rotate-chart {
+    }
+    .chartHeader{
+    margin-left: 1vw;
+    width: 98vw;
+    }
+    .chart-back-button{
+    position: absolute;
+    bottom: 2%;
+    text-align: center;
+    }
+    .themeHeaderDivCenter_CHART{
+    height: 82%;
+    position: absolute;
+    bottom: 15%;
+    width: 99%;
+    padding: 5%;
+    overflow: hidden;
+    }
+    .calender-selector{
+       width:36%;
+       margin-top: 10%;
+    }
+    .day-pickers{
+        width: 56%;  margin-left: 5%; 
+    }
+    
