@@ -1,0 +1,109 @@
+
+ <ion-view cache-view='false' view-title="SensorSetup" class="alertPageImg">
+        <!-- Header -->
+        <div class="bar bar-header themeHeader">
+            <div class="themeHeaderBgImg">
+                <div class="themeHeaderDivLeft" ng-click="gotoScreen('config');"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+                <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Sensors Setup</span></div>
+                <div class="themeHeaderDivRight"></div>
+            </div>
+        </div>
+    
+    
+      <ion-content class="has-header has-footer themeContent contentStationDetail font-halvetica-neue-thin font-16 padding" >
+            <div class="ports-div">
+                <div class="row color-dark padding-b-10">
+                    <div class="col text-left font-18">
+                        Select port:
+                    </div>
+                </div>
+                <div class="row row-center color-dark padding-b-10 ">
+                        <div class="col col-33 text-right">
+                            <img  style="width: 75%;    vertical-align: middle;" ng-src="./img/menu/yes.png"> 
+                        </div> 
+                        <div class="col col-67 org-item-name">
+                            Port A
+                        </div>
+                </div>
+                <div class="row row-center color-dark padding-b-10">
+                        <div class="col col-33 text-right">
+                            <img  style="width: 75%;    vertical-align: middle;" ng-src="./img/menu/no.png" ng-click="gotoScreen('portBsensor')"> 
+                        </div> 
+                        <div class="col col-67 org-item-name">
+                            Port B
+                        </div>
+                </div>
+            </div>
+            <div class="ports-img-div">
+                <img  style="width: 100%;" ng-src="./img/portA.png"> 
+            </div>      
+            <div class="sensor-type-setup-div ">
+                <div class="row color-dark config-row">
+                    <div class="col text-left font-16">
+                       What type of sensor is connected to Port A?
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-20 text-right" >
+                        <img  ng-show="sensor.assetTypeCode!=sensorType.none" style="width: 40%;vertical-align: middle;" ng-src="./img/menu/no.png" ng-click="changeSensorType(sensorType.none)"> 
+                        <img  ng-show="sensor.assetTypeCode==sensorType.none" style="width: 40%;vertical-align: middle;" ng-src="./img/menu/yes.png"> 
+                    </div>
+                    <div class="col col-80 font-14" >
+                        None     
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-20 text-right" >
+                        <img  ng-show="sensor.assetTypeCode!=sensorType.temp" style="width: 40%;vertical-align: middle;" ng-src="./img/menu/no.png" ng-click="changeSensorType(sensorType.temp)">
+                        <img  ng-show="sensor.assetTypeCode==sensorType.temp" style="width: 40%;vertical-align: middle;" ng-src="./img/menu/yes.png">  
+                    </div>
+                    <div class="col col-40 font-14 " >
+                        Temperature     
+                    </div>
+                    <div class="col col-40 " >
+                        <img  style="width: 75%;vertical-align: middle;" ng-src="./img/Temperature_tool.png">    
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col col-20 text-right" >
+                        <img  ng-show="sensor.assetTypeCode!=sensorType.soil" style="width: 40%; vertical-align: middle;" ng-src="./img/menu/no.png" ng-click="changeSensorType(sensorType.soil)"> 
+                        <img  ng-show="sensor.assetTypeCode==sensorType.soil" style="width: 40%;vertical-align: middle;" ng-src="./img/menu/yes.png">          
+                    </div>
+                    <div class="col col-40 font-14">
+                     Soil Moisture     
+                    </div>
+                    <div class="col col-40 " >
+                        <img  style="width: 75%; vertical-align: middle;" ng-src="./img/Soil_Moisture_tool.png">    
+                    </div>
+                </div>
+                <div class="col col-90 config-option font-16" style="border:none;">
+                     What would you like to name it?
+                    <p>The readings in the dashboard will appear under the name you choose</p>
+                </div>
+                 <div class="row row-center">
+                    <div class="col col-90 border-bottom-grey-solid" style="margin:auto;">
+                         <input type="text" class="input-for-notification font_style "placeholder="Type name" ng-model="sensor.assetName" maxlength="150" ng-focus="nameClicked()">
+                     </div>   
+                 </div> 
+                 <button class="button save-button" ng-click="save();" ng-disabled="previous.assetName==sensor.assetName&&previous.assetTypeCode==sensor.assetTypeCode" style="width: 88%;margin-left: 6%;">Save changes to port A</button>
+                 </div>
+      </ion-content>
+        <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+    
+              <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+              </ion-tab>
+    
+              <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+              </ion-tab>-->
+    
+              <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+              </ion-tab>
+    
+              <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+    
+              </ion-tab>
+    
+        </ion-tabs>
+    </ion-view>
+    
+    

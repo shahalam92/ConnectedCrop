@@ -1,0 +1,33 @@
+<ion-view can-swipe-back="false" view-title="step_2" class="alertPageImg">
+    <!-- Header -->
+        <div class="bar bar-header themeHeader">
+            <div class="themeHeaderBgImg">
+                <!-- <div class="themeHeaderDivLeft"ng-click="vm.goBack();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div> -->
+                <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Add New Station</span></div>
+                <div class="themeHeaderDivRight"></div>
+            </div>
+        </div>
+    
+     <ion-content class="has-header  themeContent setingContent activate">
+       <div class="step_no text-center">
+        <p>
+          Step 3 <span>of 4:</span>	Activate Station
+        </p>
+       </div>
+       <div class="step_one_message margin_top_ margin_bottom_">
+         <p>
+         To activate the station please connect:
+         </p>
+       </div>
+        <img src="img/activateStation/sensors1.jpg" style="width:94%;margin-left:3%;" alt="Sensors" />
+            <img src="img/activateStation/sensors2.png" style="width:94%;margin-left:3%;" alt="fuse" />
+        <div class="step_one_message margin_top_ margin_bottom_">
+          <p>
+           Then Press Reset button.
+          </p>
+        </div>
+        <button type="button" class="activate_button" ng-click="vm.next()" name="button">Next</button>
+     </ion-content>
+    
+    </ion-view>
+    

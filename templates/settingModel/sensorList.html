@@ -1,0 +1,49 @@
+<ion-view cache-view='false' view-title="sensorList" class="alertPageImg">
+        <!-- Header -->
+        <div class="bar bar-header themeHeader">
+            <div class="themeHeaderBgImg">
+                <div class="themeHeaderDivLeft" ng-click="gotoConfig();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+                <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">{{stationDetail.assetName?stationDetail.assetName:stationDetail.srNo}}</span></div>
+                <div class="themeHeaderDivRight" ></div>
+            </div>
+        </div>
+    <ion-content class="has-header has-footer themeContent contentStationDetail">
+     <!-- Station List -->
+            <div class="row org-list row-center font-20" ng-repeat="option in sensors" ng-click="gotoThresholds(option,$index);">
+                <div class="col col-10 org-item-img">
+                        <img  style="width: 100%;" ng-src="./img/menu/yes.png" ng-show="sensor_selected[$index] " > 
+                        <img   style="width: 100%;" ng-src="./img/menu/no.png" ng-hide="sensor_selected[$index] ">
+                </div> 
+                <div class="col col-90 org-item-name">
+                    {{option.assetName}}
+                </div>
+    
+            </div>
+            <p id="noRecordAssetDetailpg" ng-if="sensors.length == 0" class="noRecordsfound font-20 color-red">Don't  have any sensor to show</p> 
+      </ion-content>
+        <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+    
+              <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+              </ion-tab>
+    
+              <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+              </ion-tab>-->
+    
+              <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+              </ion-tab>
+    
+              <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+    
+              </ion-tab>
+    
+        </ion-tabs>
+    </ion-view>
+    <style>
+    .row + .row {
+        margin-top: 0;
+        padding-top: 5px;
+    }
+    .row:last-child{
+        border-bottom: none;
+    }
+    </style>

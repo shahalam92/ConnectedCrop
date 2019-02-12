@@ -1,0 +1,75 @@
+<ion-view cache-view='false' view-title="ConfigOption" class="alertPageImg">
+        <!-- Header -->
+        <div class="bar bar-header themeHeader">
+            <div class="themeHeaderBgImg">
+                <div class="themeHeaderDivLeft" ng-click="gotoSelectStationPg();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+                <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">{{stationDetail.assetName?stationDetail.assetName:stationDetail.srNo}}</span></div>
+                <div class="themeHeaderDivRight"></div>
+            </div>
+        </div>
+    
+    <ion-content class="has-header has-footer themeContent contentStationDetail">
+        <div class="config-container">
+            <div class="row  config-heading padding-l-0">
+                <div class="inline-block config-heading" >
+                    STATION   
+               </div>
+               <div class="inline-block width-100 padding-l-2 config-heading">
+                    <hr></hr>
+               </div>
+           </div>
+           <div class="col col-90 config-option" ng-click="changeName();">
+                Rename station  
+           </div>
+           <div class="col col-90 config-option" ng-click="gotoTransmission()">
+                Transmission Frequency 
+                <p>How often would you like to receive readings from the station?</p>
+           </div>
+           <div ng-click="gotoMap(stationDetail);" class="col col-90 config-option">
+                Location
+                <p>Locate the station on the map</p>
+           </div>
+           <!-- ng-click="gotoSensorSetup()" -->
+           <div class="col col-90 config-option" style="border-width:0;" ng-click="gotoSensorSetup()">
+                Sensors setup
+                <p>Rename sensors, update how they are connected to the stations ports</p>
+           </div>
+           <div class="row  config-heading padding-l-0">
+            <div class="inline-block config-heading">
+                NOTIFICATIONS   
+           </div>
+           <div class="inline-block width-100 padding-l-2 config-heading">
+                <hr></hr>
+           </div>
+          </div>
+           <div class="col col-90 config-option" ng-click="gotoSetNotification()" >
+                Receive notifications via...
+                <p>Enable or disable email and SMS notifications and update the contacts</p>
+           </div>
+           <div class="col col-90 config-option" style="border-color:#b7b4b4" ng-click="gotoSensorsList()">
+                Thresholds
+                <p>Define notifications thresholds and when to recieve them</p>
+           </div>
+           <div class="col col-90 config-option" style="border-width:0;" ng-click="gotoSetInversion()" ng-style="tempMetricCount<2?{'color':'#7d7d7d'}:{'color':'#3a3a3a'}">
+                Add inversion alert 
+           </div>
+        </div>
+    </ion-content>
+
+        <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+    
+              <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+              </ion-tab>
+    
+              <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+              </ion-tab>-->
+    
+              <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+              </ion-tab>
+    
+              <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+    
+              </ion-tab>
+    
+        </ion-tabs>
+    </ion-view>

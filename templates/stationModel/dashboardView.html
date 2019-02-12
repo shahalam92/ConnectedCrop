@@ -1,0 +1,169 @@
+<ion-view cache-view='false' view-title="DashBoard" class="dashBoardPageImg">
+	<!-- header -->
+		<div class="bar bar-header themeHeader">
+		<!-- <div class="dashboardHeaderBgImg">
+			<div class="headerRightIcon"><img src="./img/dashboardlistOn.png" class="dashBordHeaderMapOnIcon" ng-click="gotoMapViewPg();"/></div>
+		</div>-->
+			  <div class="mapdashBordHeaderMapButton" ng-click="gotoMapViewPg()">
+	  				<img src="./img/dashboardlistOn.png" class="mapdashBordHeaderMapOnIcon" />
+	         </div>
+       </div>
+	</div>
+	<!-- body -->
+	<ion-content style="bottom: 45px;" class="has-header has-footer " id="dashScroll" >
+      <ion-refresher spinner="none" pulling-text="Pull to refresh..." on-pulling="pullToRefresh()"> </ion-refresher>
+			<p ng-if="activate" style="color:#fff;margin: 8%;font-size: 16px;">
+				"Welcome to ConnectedCrops! Thank you for signing up, you’re on your way to making better data driven decisions. Let's get started! You can check the manual for detailed steps. When ready  
+				<span ui-sref="stepOne" style="color:#59afe1">Click here</span> to start adding stations and get the readings."
+			</p>
+    <!-- --------------------- List of Staions ------------------ -->
+
+
+	<ul>
+		<li id="liId{{stationDetail.asset.assetId}}" ng-repeat="stationDetail in allStationsInfoDetail" class="" ng-init="rowIndex = $index">			
+			<div ng-class="" >
+				<div class="row  asset-name padding-b-0">
+					<div class="col col-75 padding-tb-0 ">
+							{{stationDetail.asset.assetName?stationDetail.asset.assetName:stationDetail.asset.srNo}}
+					</div>
+					<div class="col col-15 text-center menu-icon padding-tb-0" ng-click="openPopover($event,stationDetail.asset,$index,stationDetail.metrics)">
+							<i class="icon ion-more light"></i>
+					</div>
+					<div class="col col-10 toggle-icon padding-tb-0">
+						<div style="margin-top: 0;" class="icon listRightImg" ng-if="stationDetail.metrics.length > 0" ng-class="'listRightImgUp'" ng-show="!stationCollapseStatus[$index]" ng-click="toggleStationList($index);">
+						</div>	
+						<div style="margin-top: 0;" class="icon listRightImg" ng-if="stationDetail.metrics.length > 0" ng-class="'listRightImgDown'" ng-hide="!stationCollapseStatus[$index]" ng-click="toggleStationList($index);">
+						</div>	
+						<div style="margin-top: 0;" class="icon listRightImg listRightImgOffline" ng-if="stationDetail.metrics.length == 0"></div>
+					</div>
+				</div>
+				<div class="row  asset-org ">
+						<div class="col col-10 padding-r-0 padding-t-0 ">
+								<i class="icon ion-ios-location text-center"></i> 
+						</div>
+						<div class="col col-90 padding-l-0 padding-t-0 org-name ">
+								{{stationDetail.asset.organization.organizationName}}
+						</div>
+				</div>
+				   <div class="row padding-tb-0 asset-comm" ng-if="stationDetail.metrics.length != 0">
+						<div class="col col-90 padding-r-0 " >
+							<div class="row padding-l-0 padding-tb-0 padding-r-0  ">
+							    <div class="col col-40 comm-heading">
+										Last Communication:
+								</div>
+								<div class="col text-left comm-heading comm-time">
+								<!-- am-time-ago='{{stationDetail.asset.lastCommunication}} -->
+									<span  ng-class="stationDetail.metricsColor">
+									 {{stationDetail.asset.relative_time }}										
+									</span>
+								</div>
+							</div>
+								
+						</div>
+						
+						<div class="col col-10 text-right bat-icon padding-l-0" >
+							<img ng-src="img/{{stationDetail.batteryStatus}}.png">
+								<!-- <div class="row padding-l-0 padding-r-0 padding-tb-0">
+									<div class="col col-50 text-right bat-icon">
+											<img ng-src="img/{{stationDetail.batteryStatus}}.png">
+											<img ng-src="img/high.png">
+									</div> -->
+									<!-- <div  ng-class="'reading-color-'+stationDetail.batteryStatus" class="col col-50 text-right bat-reading-font">
+											{{stationDetail.batteryValue}}%												
+									</div> -->
+						</div>									
+					</div>	
+				</div>
+
+ <!-- ----------List of Staion`s Sensor----------- -->
+
+				<ul id="ulShowId{{$index}}" class="divNestedListContainerDashboard" ng-show="!stationCollapseStatus[$index]">  <!-- Nested list start -->
+					<li ng-if='sensor.active&&sensor.class!=""' class="sub-asset-container" ng-repeat="sensor in  stationDetail.metrics " ng-click="gotoSensorDetail(sensor,stationDetail);" ng-init="columnIndex = $index">
+                        <div class="sensor-box-div">
+                        <!-- Sensor`s Icon -->
+							<div class="icon sensor-icon-container" ng-class="sensor.icon" ></div>							
+	                    <!-- Sensor`s value & Unit Icon  -->
+	                 		 <div class="sensor-reading-container">
+	                 		 	<div class="row padding-r-0 padding-b-0 padding-l-0" ng-class="sensor.status=='sensor-status-error'?'line-height-normal':''" >
+	                 		 		<div class="col text-center " ng-class="sensor.status" >
+	                 		 			<span ng-if="sensor.status!='sensor-status-error'">{{sensor.reading | number:1}}
+	                 		 			<span class="sensor-reading-unit">{{sensor.unit}}</span>
+	                 		 			 </span>
+	                 		 			<div class="sensor-error-font" ng-style="{'line-height': '{{sensor.ErrorMsg=='Error'?'38px':'normal';}}'}" ng-if="sensor.status=='sensor-status-error'">{{sensor.ErrorMsg}}</div>
+	                 		 			
+	                 		 		</div>
+	                 		 	</div>	
+							</div>
+						</div>
+						<div class="sensor-name-container">{{sensor.assetName}}</div> 
+                        <!-- </div> -->
+					</li>
+				</ul>  <!-- Nested list end -->
+
+				<!-- No sensor list -->
+				<ul id="ulHideId{{$index}}" class="divNestedListContainerDashboard" ng-hide="!stationCollapseStatus[$index]">
+				     <li><li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<div ng-show="showadd" class="add-button"  ng-class="activate?'add-button-bottom':''"ui-sref="stepOne">
+		<img src="img/menu/plus_icon.png" style="width: 100%; margin-bottom: 12px;">
+	</div>
+	</ion-content>
+
+			<div ng-hide="menu_item" class="email-backdrop">			
+			<div  class="export-popup">
+       		<img src="img/menu/popup_Bg.png" style="width: 100%">
+       		  <div class="popup-lg-item-container">
+          	<div class="row padding-l-0">
+          		<div class="col col-20">
+          		<img src="img/menu/mail.png" style="width: 65%">
+          		</div>
+          		<div class="col col-80" style="font-size: 20px;">
+          		Email(s) to send to :
+          		</div>
+            </div>
+			    <label class="item-input-wrapper email-input">
+			      <input ng-model="user_emails" type="text" placeholder="Type Your Email Address">
+			    </label>
+			  <label class="tip">TIP:</label>
+			  <p>you can provide more than one email seperated by commas</p>
+			  <div class = "col text-left">
+			   <button  ng-click="cancel()" class="button send-mail-button">
+				  CANCEL
+				</button>
+                <button  ng-click="emailReport(user_emails)" class="button send-mail-button" style="margin-left: 15%;">
+				  SEND
+				</button>
+				 
+          	  </div>
+          </div>
+         </div>
+		</div>
+
+ <!-- tab -->
+	<ion-tabs class="tabs-icon-top hide-on-keyboard-open" id="dashboardFooter">
+
+	<ion-tab title="Home"  icon="tabhome" class = "active">
+
+	<!-- Tab 1 content -->
+	</ion-tab>
+
+	<!-- <ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+	
+	</ion-tab> -->
+
+	<ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+	<!-- Tab 3 content -->
+	</ion-tab>
+
+	<ion-tab title=Settings    icon="tabsettings" ng-click="gotoSettingview();">
+	<!-- Tab 3 content -->
+	</ion-tab>
+
+	</ion-tabs>
+
+
+
+</ion-view>

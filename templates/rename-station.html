@@ -1,0 +1,12 @@
+<div>
+   <div class="custom-popup-title">Rename Station</div>
+    <input type="text" class="custom-popup-input font_style" placeholder="Farm / Organization Name" ng-model="station_name.assetName" maxlength="150">
+    <div class="custom-popup-buttons">
+        <button ng-click="close()" class="button button-clear ">
+          CANCEL
+        </button>
+        <button ng-click="save(station_name.assetName)" ng-disabled="!station_name.assetName.length" class="button button-clear ">
+          DONE
+        </button>
+    </div>  
+</div>

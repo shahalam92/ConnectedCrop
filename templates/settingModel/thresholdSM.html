@@ -1,0 +1,180 @@
+<ion-view  cache-view="cache" view-title="settingview" class="alertPageImg">
+
+        <div class="bar bar-header themeHeader">
+            <div class="themeHeaderBgImg">
+                <div class="themeHeaderDivLeft" ng-click="gotoSensorsList();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+                <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">{{stationDetail.selectedSensor.assetName?stationDetail.selectedSensor.assetName:stationDetail.selectedSensor.srNo}}</span></div>
+            </div>
+        </div>
+    
+        <ion-content class="has-header has-footer threshold themeContent themeContentConfigStation font-halvetica-neue-thin" padding>
+            <div class="row color-dark config-row">
+               <div class="col text-left">
+                   Sensor name:
+               </div>
+            </div>
+            <div class="row row-center">
+               <div class="col col-90 border-bottom-grey-solid" style="margin:auto;">
+                    <input type="text" class="input-for-notification font_style "placeholder="Enter sensor name" ng-model="station_name.assetName" maxlength="150">
+                </div>   
+            </div>
+            <div class="row color-dark config-row" style="margin-top: 6%;">
+               <div class="col col-80 text-left">
+                  <div style="float:left;"> Notifications thresholds:</div><img class="info_icon " src="img/setting/info.png" ng-click="gotoInfo()">
+               </div>
+               <div class="col col-33 text-left">
+                
+               </div>
+            </div>
+            <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types" style="padding: 6px !important;">
+               <div class="col col-33 text-left padding-l-4">
+                  Soil type:
+               </div>
+               <div class="col col-67 text-left">
+                <select class="alert-type-input-div select_box soil_select_box" ng-change="changeSoilType(selectedSoil)" data-ng-options="o.soilType for o in soilOptions" data-ng-model="selectedSoil">
+                        <option style="display:none" value="" name="">Select</option>
+                </select>
+                </div>
+            </div>
+            <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types" >
+               <div class="col col-50 text-left padding-l-4">
+                  Wilting point:
+               </div>
+               <div class="col col-50 text-left margin-l-5">
+                   <div class="row row-center">
+                       <div class="col col-80 text-center padding-tb-0 padding-lr-0 ">
+                           <div class="row row-center padding-b-0  padding-lr-0 " style="background: #DEE3E7;border-radius: 5px;">
+                                       <div class="col text-center  padding-r-0" ng-click="decrementWilting()">
+                                               <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                       </div>
+                                       <div class="col  text-center padding-t-0  padding-lr-0">
+                                               <input type="text" class="transparent-input-color-blue font-16-res text-center" style="width: 100%;" ng-model="default.wiltingPointValue" ng-change="checkValue(default.wiltingPointValue,'wiltingPointValue')">
+                                       </div>
+                                       <div class="col  text-center  padding-l-0" ng-click="incrementWilting()">
+                                               <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                       </div>
+                           </div>
+                       </div>
+                       <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                               {{unit}}
+                       </div>
+                      
+               </div>
+                </div>
+            </div>
+            <div class="threshold_error wiltingPointValue error_div_signup " >
+                <div class="danger_icon"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                 <div class="validation_message">{{message}}</div>
+            </div>
+            <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types">
+                <div class="col col-50 text-left padding-l-4">
+                  Field capacity:
+                </div>
+                <div class="col col-50 text-left margin-l-5">
+                    <div class="row row-center">
+                        <div class="col col-80 padding-tb-0  text-center padding-lr-0">
+                            <div class="row row-center padding-b-0  padding-lr-0" style="background: #DEE3E7;border-radius: 5px;">
+                                        <div class="col text-center  padding-r-0" ng-click="decrementField()">
+                                                <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                        </div>
+                                        <div class="col  text-center padding-t-0  padding-lr-0">
+                                                <input type="text" class="transparent-input-color-blue font-16-res text-center" style="width: 100%;" ng-model="default.fieldCapacityValue" ng-change="checkValue(default.fieldCapacityValue,'fieldCapacityValue')">
+                                        </div>
+                                        <div class="col  text-center  padding-l-0" ng-click="incrementField()">
+                                                <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                                {{unit}}
+                        </div>
+                       
+                </div>
+                 </div>
+             </div>
+             <div class="threshold_error fieldCapacityValue error_div_signup " >
+                <div class="danger_icon" ><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                 <div class="validation_message">{{message}}</div>
+            </div>
+             <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types">
+                <div class="col col-50 text-left padding-l-4">
+                   Soil moisture (VWC%) is above:
+                </div>
+                <div class="col col-50 text-left margin-l-5">
+                    <div class="row row-center">
+                        <div class="col col-80 padding-tb-0  text-center padding-lr-0">
+                            <div class="row row-center padding-b-0  padding-lr-0" style="background: #DEE3E7;border-radius: 5px;">
+                                        <div class="col text-center  padding-r-0" ng-click="decrementSoilHigh()">
+                                                <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                        </div>
+                                        <div class="col  text-center padding-t-0  padding-lr-0">
+                                                <input type="text" class="transparent-input-color-blue font-16-res text-center"   style="width: 100%;" ng-model="default.highSoilMoisValue" ng-change="checkValue(default.highSoilMoisValue,'highSoilMoisValue')" >
+                                        </div>
+                                        <div class="col  text-center  padding-l-0" ng-click="incrementSoilHigh()">
+                                                <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                                {{unit}}
+                        </div>
+                       
+                </div>
+                 </div>
+             </div>
+             <div class=" threshold_error highSoilMoisValue error_div_signup threshold_error">
+                <div class="danger_icon" ><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                 <div class="validation_message">{{message}}</div>
+            </div>
+             <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types">
+                <div class="col col-50 text-left padding-l-4">
+                    Soil moisture (VWC%) is below:
+                </div>
+                <div class="col col-50 text-left margin-l-5">
+                    <div class="row row-center">
+                        <div class="col col-80 padding-tb-0  text-center padding-lr-0">
+                            <div class="row row-center padding-b-0 padding-lr-0" style="background: #DEE3E7;border-radius: 5px;">
+                                        <div class="col text-center  padding-r-0 " ng-click="decrementSoilLow()">
+                                                <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                        </div>
+                                        <div class="col  text-center padding-t-0  padding-lr-0">
+                                                <input type="text" class="transparent-input-color-blue font-16-res text-center"  ng-change="checkValue(default.lowSoilMoisValue,'lowSoilMoisValue')"  style="width: 100%; " ng-model="default.lowSoilMoisValue">
+                                        </div>
+                                        <div class="col  text-center  padding-l-0" ng-click="incrementSoilLow()">
+                                                <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                                {{unit}}
+                        </div>
+                       
+                </div>
+                 </div>
+             </div>
+             <div class=" threshold_error lowSoilMoisValue error_div_signup ">
+                <div class="danger_icon"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                 <div class="validation_message">{{message}}</div>
+            </div>
+       
+       
+          <button class="button save-button" data-ng-click="save();">Save</button>
+        </ion-content>
+    
+         <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+    
+              <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+              </ion-tab>
+    
+                <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+                </ion-tab>-->
+    
+              <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+              </ion-tab>
+    
+              <ion-tab title="Settings"  icon="tabsettings" ng-click="gotoSettingview();" class = "active">
+              </ion-tab>
+    
+        </ion-tabs>
+</ion-view>
+    

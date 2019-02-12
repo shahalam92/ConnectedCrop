@@ -1,0 +1,160 @@
+<ion-view can-swipe-back="false" view-title="waiting_to_connect" class="activateStationImg">
+<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div ng-show="waitVm.header" class="themeHeaderDivLeft" ng-click="waitVm.goBack();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Add New Station</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+ <ion-content class="has-header themeContent setingContent activate" style="height: 85vh;">
+		<ion-refresher spinner="none"pulling-text="Pull to refresh..." on-pulling="pullToRefresh()"> </ion-refresher>
+		<!-- ********************************************waiting_page********************************************************** -->
+		
+		<div ng-show="true" class="waiting_page">
+				<img src="img/activateStation/waiting_bg.png" style="width: 74%;margin-left: 13%;margin-top: 13%;" alt="" />
+				<div class="waiting_progress text-center">
+				<div class="text-center " style="margin-top: 8%;">
+				<ion-spinner icon="bubbles" class="spinner-dark custom"></ion-spinner>
+				<p style="color: #b5c6d2;" >Waiting for readings...</p>
+				</div>
+				</div>
+				<div class="next_button text-center" style="margin: 0;padding: 2%;">
+				<p>
+				To resend readings press reset button and make sure the LEDs light up.
+				</p>
+				</div>
+		</div>
+		<!-- ********************************************error_one_page********************************************************** -->
+				
+		<div style="display:none;margin: 5%;" class="error_one_page">
+				<div class="error_heading">
+					<img src="img/activateStation/exclamation_red.png" alt="" />
+					<p style="margin-left: 15%;">The station is not connecting,please check the following:</p>
+				</div>
+				<ul class="points">
+					<li class="point_no"><img src="img/activateStation/1.png" alt="" />
+					<p>The fuse is plugged in correctly</p>
+					</li>
+					<li class="point_no"><img src="img/activateStation/2.png" alt="" />
+					<p>The LEDs on the station are on when you push the reset button and stay on for more than 5 seconds before they turn off again</p>
+					</li>
+					<li class="point_no"><img src="img/activateStation/3.png" alt="" />
+					<p>LED 2 is not red</p>
+					</li>
+				</ul>
+				<p>If point 1 is done and point 2 is not achieved,it could be that the battery is discharged
+				,please leave it in direct sun exposure for more than 8 hours and recheck.
+				</p>
+				<p>
+					If point 2 and 3 are achieved ,please check the LED under the connection/signal icon if it's flashing red,it means it's
+					struggling to get a good signal,try another location with better coverage.If it stays in solid red or point 3 is not achieved please contact
+					<a>support@connectedcrops.ca</a>.If it was green ,please refresh this page by pulling it down to recheck if reading were picked up.
+				</p>
+				<a ng-click="gotoOpenWebsite();" style="text-decoration: none;">Click here for help with instructions</a>
+				<br><br>
+		</div>
+		<!-- ********************************************error_two_page********************************************************** -->
+		<div style="display:none;margin: 5%;" class="error_two_page">
+				<div class="error_heading">
+					<img src="img/activateStation/exclamation_red.png" alt="" />
+					<p style="margin-left: 15%;">The app didn't pickup the readings yet, please check the following:</p>
+				</div>
+				<ul class="points">
+					<li class="point_no"><img src="img/activateStation/1.png" alt="" />
+						<p>The sensors are connected correctly.Check how to connect them <a ng-click="gotoOpenWebsite();" style="text-decoration: none;">here</a></p>
+					</li>
+					<li class="point_no"><img src="img/activateStation/2.png" alt="" />
+						<p>The LEDs on the station are on when you push the reset button and stay on for more than 5 seconds before they turn off again and LED "2" is not red</p>
+					</li>
+					<li class="point_no"><img src="img/activateStation/3.png" alt="" />
+						<p>LED 2 is not red</p>
+					</li>
+				</ul>
+				<p>If the points above were achieved please wait for few minutes and refresh by pulling the page down.If point 2 is not achieved,it could mean that one or more of the sensors is not working ,please contact
+					<a>support@connectedcrops.ca</a>
+				</p>
+				<a ng-click="gotoOpenWebsite();" style="text-decoration: none;">Click here for help with instructions</a>
+				<br><br>
+		</div>
+		<!-- ********************************************error_two_page********************************************************** -->
+		<div style="display:none; margin: 5%;" class="error_three_page">
+				<div class="error_heading">
+					<img src="img/activateStation/exclamation_red.png" alt="" />
+					<p style="margin-left: 15%;">Oooops! The app is not picking up the readings. Please contact  <a >support@connectedcrops.ca</a></p>
+				</div>
+				<br><br>
+		</div>
+		<!-- ********************************************Conguration Page ********************************************************** -->
+		<div  style="display:none;" class="step_3_page">
+				<div style="margin:3%;"  class="step_3_head margin_bottom_zero">
+					<p style="margin-bottom: 2%;font-size: 25px;">Congratulations!</p>
+					<p class="margin_bottom_zero ">{{waitVm.success.message}}	
+					</p>
+				</div>
+				<ul style="height: 188px;">
+					<li id="liId{{$index}}">
+						<div ng-class="(stationDetails.metrics.length > 0) ? 'listitemSensorData battery-list' : 'listitem battery-list'" style="padding-top: 0px;">
+							<ul style="margin-top: 0;" class="divNestedListContainerDashboard" >  
+								<li  class="stationitemDetailsDashboard dashboard-new" ng-repeat="sensor in stationDetails.metrics ">
+								<div class="sensor-box-div">
+									<!-- Sensor`s Icon -->
+									<div class="icon sensor-icon-container" ng-class="sensor.icon" ></div>							
+									<!-- Sensor`s value & Unit Icon  -->
+									<div class="sensor-reading-container">
+										<div class="row padding-r-0 padding-b-0 padding-l-0" ng-class="sensor.status=='sensor-status-error'?"'line-height-normal'":''" >
+										<div class="col text-center " ng-class="sensor.status" >
+											<span ng-if="sensor.status!='sensor-status-error'">{{sensor.reading | number:1}}
+												<span class="sensor-reading-unit">{{sensor.unit}}</span>
+											</span>
+											<div class="sensor-error-font" ng-style="{'line-height': '{{sensor.ErrorMsg=='Error'?'38px':'normal';}}'}" ng-if="sensor.status=='sensor-status-error'">{{sensor.ErrorMsg}}</div>
+										</div>
+										</div>	
+									</div>
+								</div>
+								<div class="sensor-name-container color-light">{{sensor.assetName}}</div> 
+								</li>
+								<!-- Battery Level -->
+								<div class="sensor-battery-div">
+								<!-- Battery Level Icons -->
+								<!-- <div ng-if="stationDetails.batteryValue == 200||stationDetails.batteryValue == -100" style="margin-top:75%;"class="icon battery-icon_error battery-icon-grey"><p style="position: relative;bottom: 80%">Error</p></div> -->
+								<div  class="icon battery-icon" ng-class="stationDetails.batteryStatus"></div>
+								<!-- Battery Level text -->
+								<div class="battery-level-text color-light">Battery Level</div>
+								</div>
+							</ul>  <!-- Nested list end -->
+						</div>
+					</li>
+				</ul>
+				<div class="step_no text-center margin_top_">
+				<p>
+				Step 4 <span>of 4</span>Configure Station
+				</p>
+				</div>
+				<div class="step_one_message  margin_bottom_">
+				<p>
+				To make the best use of ConnectedCrops, we highly recommend configuring alerts and their thresholds.
+				</p>
+				</div>
+				<button style="margin-top:0;" type="button" class="activate_button margin_bottom_zero" ng-click="waitVm.next()" name="button">Next</button>
+		</div>
+
+ </ion-content>
+ <ion-tabs style="display:none;"  class="tabs-icon-top" id="dashboardFooter">
+		<ion-tab title="Home" icon="tabhome" ng-click="waitVm.gotoDashboard();">
+		</ion-tab>
+
+		<!-- <ion-tab title="Compare" icon="tabcompare" ng-click="waitVm.gotoCompareview();">
+		</ion-tab> -->
+
+		<ion-tab title="Events" icon="tabalerts" badge="events_count" badge-style="badge-assertive"  ng-click="waitVm.gotoAlertview();">
+		</ion-tab>
+
+		<ion-tab title="Settings"  icon="tabsettings"ng-click="waitVm.gotoSettingview();" class = "active">
+
+		</ion-tab>
+
+</ion-tabs>
+
+</ion-view>

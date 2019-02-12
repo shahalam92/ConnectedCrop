@@ -1,0 +1,44 @@
+
+ <ion-view can-swipe-back="false" view-title="selectStationView" class="alertPageImg">
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoSettingPg();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark"> About</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+
+  <ion-content class="has-header has-footer themeContent contentStationDetail">
+    <div class=about_root_div>
+      <div>
+        <img src="./img/aboutLogo.png" class="aboutlogo" />
+      </div>
+      <span class="version_text">Version {{versonNumber}}</span>
+      <div>
+        <div class="about_text_div">
+          <p>The ConnectedCrops™ mobile application is designed and owned by Esprida Corporation, an Internet of Things company.  Use of this application is governed by the licence agreement to which you agreed upon download.</p>
+          <p>Copyright 2018, Esprida Corporation. <br/> All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+    <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!-- <ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>--> 
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+</ion-view>

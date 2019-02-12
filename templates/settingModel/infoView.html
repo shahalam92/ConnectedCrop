@@ -1,0 +1,33 @@
+<ion-view can-swipe-back="false" view-title="infoView" class="alertPageImg">
+<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft"ng-click="vm.gotoConfigPage();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Threshold Settings</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+ <ion-content class="has-header has-footer themeContent setingContent background_image_info">
+
+ </ion-content>
+
+	 <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="vm.gotoDashboard();">
+		  </ion-tab>
+
+		<!--   <ion-tab title="Compare" icon="tabcompare" ng-click="vm.gotoCompareview();">
+		  </ion-tab> -->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts"   ng-click="vm.gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"ng-click="vm.gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+
+
+</ion-view>

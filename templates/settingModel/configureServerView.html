@@ -1,0 +1,37 @@
+
+
+<ion-view view-title="settingview" class="alertPageImg">
+
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoLoginView();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Configure Server</span></div>
+			<div class="themeHeaderDivRight">
+			</div>
+		</div>
+	</div>
+	
+ <ion-content class="has-header  themeContent settingConfigServerContent">
+ 		<ion-toggle class="server-list" ng-repeat="item in settingsList"
+                ng-model="item.checked" 
+                ng-checked="item.checked" ng-change="toggleChange(item)">
+    			{{ item.text }}
+		</ion-toggle>
+		<div ng-show="settingsList[3].checked">   
+		   <div class = "col button-row text-center">
+		       <label class="item item-input loginLabel">
+		       <i class="icon  placeholder-icon"><img src="./img/configServerIcon.png" class="loginInputPlaceholderIcon"/></i>
+		       <input ng-keyup="custom_urll(settingsList[3].custom_url)" type="text" class="serverConfigInputText" ng-model="settingsList[3].custom_url" placeholder="Server Url or IP address">
+			   </label>
+		       <hr class="lineClassConfigPg">
+		    </div>
+		</div>
+		   
+	    <div class = "col text-center divButtonContainerConfigServerClass">         
+	      <label class="item loginSubmit">
+	        <button id="signInBtn" class="button loginBtnClass"  ng-click="setBaseUrl(baseurl);">Save</button>
+		  </label>                
+	    </div>      
+ </ion-content>
+ 
+</ion-view>

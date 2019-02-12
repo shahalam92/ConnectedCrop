@@ -1,0 +1,106 @@
+
+ <ion-view  view-title="sensordetailview" class="compareSensorPageImg">
+
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoBackFromSensorCompare();"><img src="./img/backArrow.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle"> Compare Readings</span></div>
+			<div class="themeHeaderDivRight">
+	    </div>
+		</div>
+	</div>
+
+  <ion-content class="has-header has-footer compareSensorPgContent">
+	  <span class="readingDeatailTitleSpanLastReading" style="padding-left: 3%;">Comparison </span>
+	  <div ng-class="divChartContainerComparePg">
+		   <svg id="compareChartDiv" style="width:100%;height:39vh;"></svg>
+      </div>
+	  <div class="readingDetailsContainerLastReadingPg">
+	     <span class="readingDeatailTitleSpanLastReading">Chosen Sensors Last Readings: </span>
+	     <ul id="stationListContainerUl" class="UlStationClass">
+	      	<!--<li class="LiStationClass"  ng-repeat="compareStation in compareStationArray">-->
+			 <li class="LiStationClass"  ng-repeat="compareStation in compareSensorArray">
+			   <!--<span class=titleLiStationClass>{{compareStation.asset.assetName?compareStation.asset.assetName:compareStation.asset.srNo}}<img ng-hide="true" style=" width: 6%; float: right;" src="./img/setting/arrow_right.png" >  </span>-->
+				 <span class=titleLiStationClass>{{compareStation.assetDetail.assetName?compareStation.assetDetail.assetName:compareStation.assetDetail.srNo}}<img  ng-show="!stationMetricListShowStatus[$index]" style=" width: 6%; float: right;" src="./img/move_next_icon.png" ng-click="toggleStationList($index)" ><img ng-hide="!stationMetricListShowStatus[$index]" style=" width: 6%; float: right;" src="./img/listDown.png" ng-click="toggleStationList($index)" >  </span>
+				  <!--------------------- for Single Station------------------------------------->
+						<ul>
+							<li class="sensorDataLiClass" ng-repeat="history in compareStation.sensorArray[0]  | limitTo:1" ng-show="!stationMetricListShowStatus[$parent.$index]">
+		             <span>
+  							   <span class="icon compareIconContainerDiv stationitemDetailslistLeftImgIconsSoilMoisuture" ng-if="multiSearch(compareStation.metricCode,['soil','sm'])"></span>
+  							   <span class="icon compareIconContainerDiv stationitemDetailslistLeftImgIconsTemprature" ng-if="multiSearch(compareStation.metricCode,['temp','t1','t2'])"></span>
+			           </span>
+	               <span style="margin-left: 12%;font-size: 12px;"> {{compareStation.frendlyName}} :
+      							  <span class="metric_value_font" ng-if="multiSearch(compareStation.metricCode,['soil','sm','hum'])">{{history.metricValue |number:1}}<span ng-if="!multiSearch((history.metricValue).toString(),['error','please'])">%</span></span>
+      							  <span  class="metric_value_font" ng-if="multiSearch(compareStation.metricCode,['temp','t1','t2'])">{{history.metricValue |number:1}}<span ng-if="!multiSearch((history.metricValue).toString(),['error','please'])">&#8451;</span></span>
+                 </span>
+						 	   <span  ng-class="(history.sensorColor == 'blue') ? 'ReadOnTxtBlue' : 'ReadOnTxtRed'" > <span class="detectiondate">Detection Time:</span> {{history.detectionTime | date:'dd MMM  yyyy '}} , {{history.detectionTime | date:'h:mm a'}} </span>
+							</li>
+							<li class="no-items no_items_style " ng-show="!stationMetricListShowStatus[$index]">
+			    		  <span>
+                  <span class="icon compareIconNoRecords stationitemDetailslistLeftImgIconsSoilMoisuture" ng-if="multiSearch(compareStation.metricCode,['soil','sm'])"></span>
+		              <span style="margin-top: -1%;"class="icon compareIconNoRecords stationitemDetailslistLeftImgIconsTemprature" ng-if="multiSearch(compareStation.metricCode,['temp','t1','t2'])"></span>
+                </span>
+                <span style="padding-left:4%;">No Records</span>
+							</li>
+
+						</ul>
+
+<!--			   <ul>
+				  <li  class="sensorLiClass"   ng-repeat="metricArrayData in compareStation.selectedSensorList  ">
+
+                     <ul id="divListHistoryContainer">
+					   <li class="sensorDataLiClass" id="{{$index}}" ng-repeat="history in metricArrayData.sensorArray[0]  | limitTo:1">
+		                   <span>
+							   <span class="icon compareIconContainerDiv stationitemDetailslistLeftImgIconsSoilMoisuture" ng-if="multiSearch(metricArrayData.metricCode,['soil','sm'])"></span>
+							   <span class="icon compareIconContainerDiv stationitemDetailslistLeftImgIconsTemprature" ng-if="multiSearch(metricArrayData.metricCode,['temp','t1','t2'])"></span>
+			               </span>
+	                       <span style="margin-left: 10%"> {{metricArrayData.metricName}} : {{history.metricValue}}
+	                              <span  ng-if="multiSearch(metricArrayData.metricCode,['soil','sm','hum'])">%</span>
+			                      <span  ng-if="multiSearch(metricArrayData.metricCode,['temp','t1','t2'])">&#8451;</span>
+		                   </span><br>
+                           <span  ng-class="(history.sensorColor == 'blue') ? 'ReadOnTxtBlue' : 'ReadOnTxtRed'" > Read on : {{history.detectionTime | date:'dd MMM  yyyy '}} , {{history.detectionTime | date:'h:mm a'}} </span>
+			           </li>
+					   <li class="no-items" style="color: red;text-align:left;margin-left: 10%">
+			    		     <span>
+			    		         <span class="icon compareIconNoRecords stationitemDetailslistLeftImgIconsSoilMoisuture" ng-if="multiSearch(metricArrayData.metricCode,['soil','sm'])"></span>
+		                         <span class="icon compareIconNoRecords stationitemDetailslistLeftImgIconsTemprature" ng-if="multiSearch(metricArrayData.metricCode,['temp','t1','t2'])"></span>
+							 </span>No Records
+			           </li>
+
+					</ul>
+				</li>
+		      </ul>--> <!--------------------------- for single station sensor list Ul--------------------->
+
+		    </li> <!-- Station list div -->
+		  </ul>
+
+	  </div>
+
+
+
+
+
+    </ion-content>
+
+
+	 <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		    <!-- Tab 1 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Compare" icon="tabcompare" class = "active">
+		    <!-- Tab 2 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		    <!-- Tab 3 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Settings" icon="tabsettings" ng-click="gotoSettingview();">
+    <!-- Tab 3 content -->
+  </ion-tab>
+
+	 </ion-tabs>
+
+</ion-view>

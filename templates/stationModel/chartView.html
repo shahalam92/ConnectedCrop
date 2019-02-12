@@ -1,0 +1,83 @@
+
+ <ion-view view-title="chartview" class="sensorGraphPageImg">
+
+	<div class="bar bar-header themeHeader chartHeader">
+		<div class="themeHeaderBgImg header-icon">
+			<div class="themeHeaderDivLeft" style="width:10%" ng-click="gotoList();"><img src="./img/backArrow.png" class="themeHeaderIconOnLeft"/></div>
+			<!-- <div class="names-DIV" style="margin: .9% 3% 3% 12%;"> -->
+			<div class="" style="margin-left: 10%;width: 93%;">
+		    <div class="chart_station-name-DIV inline-block width-27">
+		       <div class="heading-s">Station:</div>
+					 <div class="names-s">
+							{{chart_data.assetName?chart_data.assetName:chart_data.srNo}}
+							
+						</div>
+					 <!-- <div class="" style="float:right">
+						<i class="icon ion-ios-location text-center" style="color:#97A1AA"></i> <span class="color-white">{{chart_data.organizationName}}</span>
+				  </div> -->
+		    </div>
+		    <div class="chart_sensor-name-DIV inline-block width-27" style="padding-right:3%;border-right: 1px solid #656363;" >
+		        <div class="heading-s">Sensor:</div>
+		        <div class="names-s" >
+						{{chart_data.metricName}}
+						</div>
+			 </div>
+			 <div class="chart_sensor-name-DIV inline-block  width-40" style="    vertical-align: super;">
+					<div class=" heading-s color-yel-light">
+						
+									<div class="inline-block color-white">
+											History Between:
+									</div>
+									<div class="inline-block padding-1">
+											{{to_date| amDateFormat:"Do MMM YYYY"}}
+									</div>
+									
+									<div class="inline-block color-white ">
+											and
+									</div>
+									<div class="inline-block" >
+										{{from_date | amDateFormat:"Do MMM YYYY"}}
+									</div>
+						
+							
+						</div>
+			 </div>
+	  </div>
+
+		</div>
+	</div>
+
+  <ion-content class="sensorDetailpgContent line-image">
+
+<!-- 	 <div class="chartContainerDivClass rotate-chart"> -->
+			<div class="inline-block day-pickers" >
+			   <a class="graphButtonClass chart-days color-green" id="one" ng-click="activeButton = 'a'; makeData(1,'1');" ng-class="{ 'active': activeButton === 'a' }">Day</a>
+			   <a class="graphButtonClass chart-days color-green" id="two" ng-click="activeButton = 'b'; makeData(6,'2');" ng-class="{ 'active': activeButton === 'b' }">Week</a>
+			   <a class="graphButtonClass chart-days color-green" id="three" ng-click="activeButton = 'c';makeData(13,'3');" ng-class="{ 'active': activeButton === 'c' }">2 Weeks</a>
+			   <a class="graphButtonClass chart-days color-green" id="four" ng-click="activeButton = 'd'; makeData(29,'4');" ng-class="{ 'active': activeButton === 'd' }">1 Month</a>
+			</div>
+			<!-- detection-time -->
+			 <div class=" inline-block text-right calender-selector" >
+				        <div class="inline-block">
+								<a  class="graphButtonClass" id="calSelected" style=" width: 90%;" ng-click="setCurrentDate()"><img style="width:50%;vertical-align: baseline;" alt="Cal" src="./img/calendar_icon.png"></a> 
+						</div>
+						<div class="inline-block color-light" style="padding-right:3%;">
+							OR
+						</div>
+						<div style="padding-right:3%;" class="topLineTxtColorRight padding-l-4 inline-block font-14 text-right" id="dateSelected" ng-class="commcolor" ng-click="lastCommunicationDayRecord()" >
+								Last detection
+								<!-- <div class="topLineTxtColorLeft inline-block width-100">Last detection :</div>
+								<div style="padding-right:2%;" class="topLineTxtColorRight padding-l-4 inline-block font-12" id="dateSelected" ng-click="lastCommunicationDayRecord()"  ng-class="commcolor">{{chart_data.LastDetection}}</div> -->
+						</div>		
+			 	</div>
+			   <div ng-if ="dataTest.length==0" style="position: absolute;color: #fa421e;top: 48vh;left: 45vw;">-- No Record--</div>
+			   <div ng-if ="dataTest.length>0">
+				<div class="icon chart-icon stationitemDetailslistLeftImgIconsSoilMoisuture" ng-if="multiSearch(chart_data.metricCode,['soil','sm'])"></div>
+			    <div class="icon chart-icon stationitemDetailslistLeftImgIconsTemprature" ng-if="multiSearch(chart_data.metricCode,['temp','t1','t2'])"></div>
+		        <div class="chart-unit">{{readingunit}}</div>
+		        <!-- <div class="chart-unit" ng-if="multiSearch(chart_data.metricCode,['temp','t1','t2'])">&#8451;</div> -->
+		        </div>
+		    <svg style="margin-left: 2%;" linear-chart></svg>
+      <!-- </div> -->
+      </ion-content>
+</ion-view>

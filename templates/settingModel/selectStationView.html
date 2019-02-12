@@ -1,0 +1,56 @@
+
+ <ion-view cache-view='false' view-title="selectStationView" class="alertPageImg">
+	<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoSettingPg();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Configure Stations</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+
+  <ion-content class="has-header has-footer themeContent contentStationDetail">
+  <ion-refresher spinner="none"pulling-text="Pull to refresh..." on-pulling="pullToRefresh()"> </ion-refresher>
+   <div class="station-list-container">
+	 <ul>
+		 <li ng-repeat="org in stationList">
+			<div class="row config-row padding-b-0">
+				<div class="col col-90 config-heading">
+						{{org.orgName}}
+				</div>
+				<div class="col col-10 text-right"  ng-click="toggleOrg($index)">
+					<img  style="width: 60%;" ng-src="./img/setting/arrow-up.png" ng-hide="orgCollapsed[$index] " > 
+					<img  style="width: 60%;" ng-src="./img/setting/arrow-down.png" ng-show="orgCollapsed[$index] ">
+				</div>
+			</div>
+			<ul class="config-ul" ng-hide="orgCollapsed[$index]">
+				<li ng-repeat="station in org.stations" ng-click="gotoStationConfigPg(station,$index);">
+					<div class="col color-light">
+							{{station.assetName}}
+					</div>
+				</li>
+			</ul>
+		</li>
+	 </ul>
+	 <p id="noRecordAssetDetailpg" ng-if="stationDetails.length == 0" class="noRecordsfound">There are no  records.</p>
+   </div>
+
+  </ion-content>
+    <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>-->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+</ion-view>

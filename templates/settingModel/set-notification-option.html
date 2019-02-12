@@ -1,0 +1,144 @@
+
+ <ion-view cache-view='false' view-title="ReceiveNOtification" class="alertPageImg">
+	<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoConfig()"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Receive notifications via...</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+
+  <ion-content class="has-header has-footer themeContent contentStationDetail padding">
+    <div class="row color-dark config-row">
+        <div class="col text-left font-18">
+            Email:
+        </div>
+        <div class="col text-right"  >
+            <div ng-model="stationPostDataAttributes[2].attributeValue" ng-click="stationPostDataAttributes[2].attributeValue=!stationPostDataAttributes[2].attributeValue;checkForChanges()">
+                    <img  style="width: 52%;" ng-src="./img/setting/on_g.png" ng-show="stationPostDataAttributes[2].attributeValue " > 
+                    <img  style="width: 52%;" ng-src="./img/setting/off_grey.png" ng-hide="stationPostDataAttributes[2].attributeValue">
+            </div>
+           
+        </div>
+    </div>
+    <div ng-show="stationPostDataAttributes[2].attributeValue" class=" email-list-container">
+            <div   class="row  padding-l-0 padding-b-0" ng-repeat="object in email_list  track by $index" >
+                <div class="col padding-tb-0 padding-l-0 padding-r-0">
+                    <div class="row row-center padding-tb-0 padding-l-0 padding-r-0">
+                            <div class="col text-left"> 
+                                    <div id="email{{$index}}" class="row border-bottom-grey-outset row-center padding-tb-0 padding-l-0 padding-r-0">
+                                        <div class="col col-90">
+                                                <input type="text" class="input-for-notification font_style "
+                                                placeholder="Enter email" ng-model="object" ng-change="validateInput(true,object,$index)">
+                                            <!-- <input type="text" class="input-for-notification font_style "placeholder="Enter email" ng-model="object" ng-change="checkEmail(object,$index)"> -->
+                                        </div> 
+                                        <div class="col col-10 text-right">
+                                            <img style="width:60%"  src="./img/shared/delete.png" alt="" style="float:right" ng-click="remove(email_list,$index,false)">
+                                        </div>  
+                                    </div>
+                                                                                
+                                </div>
+                    </div>
+                    <div class="row row-center padding-tb-0 padding-l-0 padding-r-0">
+                            <div id="email_error{{$index}}" class="temp_low_log error_div_signup notification-error">
+                                    <div class="danger_icon" style="margin-top: 12%;"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                                     <div class="validation_message">You have entered an invalid email address</div>
+                             </div>
+                     </div>
+
+                </div>
+              
+                
+            </div> 
+            
+            <div class="row color-green padding-l-0 vertical-align-col" >
+                    <div class="col col-20 text-left padding-b-0" ng-click="addEmail()" >                           
+                      <img  style="width: 60%;" ng-src="./img/menu/plus_icon.png" >  
+                    </div>
+                    <div class="col col-80 text-left font-halvetica-rounded font-18">                           
+                        Add more
+                    </div>
+            </div> 
+           
+    </div>
+    
+    <div class="row color-dark config-row border-top-grey-p12">
+            <div class="col text-left font-18">
+                SMS:
+            </div>
+            <div class="col text-right" >
+                <div ng-model="stationPostDataAttributes[3].attributeValue" ng-click="stationPostDataAttributes[3].attributeValue=!stationPostDataAttributes[3].attributeValue;checkForChanges()">
+                        <img  style="width: 52%;" ng-src="./img/setting/on_g.png" ng-show="stationPostDataAttributes[3].attributeValue " > 
+                        <img  style="width: 52%;" ng-src="./img/setting/off_grey.png" ng-hide="stationPostDataAttributes[3].attributeValue">
+                </div>
+            </div>
+    </div>
+    <div ng-show="stationPostDataAttributes[3].attributeValue"  class="row font-13 color-light config-row padding-l-8 padding-b-0">   
+           Please type in the phone number to receive SMS notifications, using one of the following formats:
+    </div>
+    <div ng-show="stationPostDataAttributes[3].attributeValue"  class="row font-13 color-light config-row padding-l-8 " style="padding-top: 1px;">   
+        +16471234567, 16471234567 or 6471234567
+    </div>
+        <div ng-show="stationPostDataAttributes[3].attributeValue" class="email-list-container ">
+                <div class="row  padding-l-0 padding-b-0" ng-repeat="object in phone_list  track by $index" >
+                        <div class="col padding-tb-0 padding-l-0 padding-r-0">
+                                <div id="phone{{$index}}"  class="row row-center border-bottom-grey-outset padding-tb-0 padding-l-0 padding-r-0">
+                                    <div class="col text-left"> 
+                                        <div class="row row-center padding-tb-0 padding-l-0 padding-r-0">
+                                                <div class="col col-90">
+                                                    <!-- <input type="tel" class="input-for-notification font_style" maxlength="15" placeholder="Enter phone no" ng-model="object" ng-change="checkPhone(object,$index)"> -->
+                                                    <input type="tel" class="input-for-notification font_style" maxlength="15"
+                                                    placeholder="Enter phone no" ng-model="object" ng-change="validateInput(false,object,$index)">
+                                                </div>  
+                                                <div class="col col-10 text-right">
+                                                    <img style="width:60%" src="./img/shared/delete.png" alt="" ng-click="remove(phone_list,$index,true)">
+                                                </div> 
+                                        </div>       
+                                    </div>
+                               </div>
+                        <div class="row row-center padding-tb-0 padding-l-0 padding-r-0">
+                                <div id="phone_error{{$index}}" class="temp_low_log error_div_signup notification-error">
+                                        <div class="danger_icon" style="margin-top: 12%;"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                                        <div class="validation_message">You have entered an invalid phone number</div>
+                                </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row color-green padding-l-0  vertical-align-col" >
+                        <div class="col col-20 text-left padding-b-0" ng-click="addPhone()" >                           
+                          <img  style="width: 60%;" ng-src="./img/menu/plus_icon.png" >  
+                        </div>
+                        <div class="col col-80 text-left font-halvetica-rounded font-18">                           
+                            Add more
+                        </div>
+                 </div> 
+                
+        </div>    
+
+        <button class="button save-button" ng-disabled="active" ng-click="save(true,'config');" style="margin-top: 10%;">Save</button>
+  </ion-content>
+    <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>-->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+</ion-view>
+<style>
+.row + .row {
+    margin-top: 0;
+    padding-top: 5px;
+}
+</style>

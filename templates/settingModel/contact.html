@@ -1,0 +1,46 @@
+
+ <ion-view can-swipe-back="false" view-title="selectStationView" class="alertPageImg">
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoSettingPg();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark"> Contact Us</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+
+  <ion-content class="has-header has-footer themeContent contentStationDetail">
+    <div style="padding-top: 8%;" class=about_root_div>
+      <div>
+        <img src="./img/aboutLogo.png" class="aboutlogo" />
+      </div>
+      <span class="version_text">Version {{versonNumber}}</span>
+      <div>
+        <div class="about_text_div">
+          <p style="font-weight:bold;margin-bottom: 6%;"> Contact Us</p>
+           <p>For general details on ConnectedCrops, please check our website  <a  ng-click="gotoOpenWebsite('http://connectedcrops.ca/');" style="text-decoration: none;color:#88CB1C;">ConnectedCrops.ca</a></p>
+          <p>For help with the stations checkout the online <a ng-click="gotoOpenWebsite('http://connectedcrops.ca/manual/')" style="text-decoration: none;color:#88CB1C;"> manual.</a> </p>
+          <p> And at anytime, for support, please email us at <a  ng-click='gotoSendMail()' target="_top" style="text-decoration: none;color:#b5a568;">support@connectedcrops.ca</a></p>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-content>
+    <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>-->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+</ion-view>

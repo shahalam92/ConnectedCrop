@@ -1,0 +1,30 @@
+<!-- <div class="row row-center">
+    <div class="col font-16 border-bottom-grey-solid" ng-repeat="sensor in sensors" ng-click="setSensor(sensor)">
+        {{sensor.assetName}}
+    </div>
+</div> -->
+<div class="row  li row-center font-18 border-bottom-grey-solid" ng-repeat="sensor in sensors" ng-click="setSensor(sensor,$index);">
+    <div class="col col-10 ">
+            <img  style="width: 150%;" ng-src="./img/menu/yes.png" ng-show="sensorSelected[$index] " > 
+            <img   style="width: 150%;" ng-src="./img/menu/no.png" ng-hide="sensorSelected[$index] ">
+    </div> 
+    <div class="col col-90 " style="padding:10px;">
+        {{sensor.assetName}}
+    </div>
+
+</div>
+<style>
+    .row + .row {
+        margin-top: 0;
+        padding-top: 5px;
+    }
+    .row:last-child{
+        border-bottom: none !important;
+    }
+    .popup-head{
+        border-color: #afa7a7;
+    }
+    .li:last-child{
+        border-bottom: none;
+    }
+</style>

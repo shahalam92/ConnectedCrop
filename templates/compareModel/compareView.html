@@ -1,0 +1,94 @@
+
+
+<ion-view view-title="compareview" class="alertPageImg">
+
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft">
+			</div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark"> Compare </span></div>
+			<div class="themeHeaderDivRight">
+			</div>
+		</div>
+	 </div>
+ <ion-content class="has-header has-subFooterComparePg  comparePageContent" style="" view-title="compareview">
+ <ion-refresher spinner="none"pulling-text="Pull to refresh..." on-pulling="pullToRefresh()"> </ion-refresher>
+<!-- Station List  -->
+   	<ul id="ulStationListContainer" class="ulStationContainerComprPgClass">
+       <li id="liId{{$index}}" ng-repeat="stationDetail in allStationsInfoDetail " ng-class="sensorsCollapsed[$index]?'divListIonItemContainerCompagePg background':'divListIonItemContainerCompagePg'" ng-init="rowIndex = $index">
+     	 <div ng-class="(stationDetail.metrics.length > 0) ? 'listitemSensorDataComparePg' : 'listitemComparePg'" >
+		     <!-- Online Station CheckBox Icon Close-->
+		     <div  class="icon listLeftImgComparePg" ng-if="stationDetail.metrics.length > 0"  ng-class="'stationListLeftImgUpCmprPg'" ng-show="sensorsCollapsed[$index];" ng-click="toggleStationList($index);"></div>
+			 <div  class="icon listLeftImgComparePg" ng-if="stationDetail.metrics.length > 0" ng-class="'stationListLeftImgDownCmprPg'" ng-hide="sensorsCollapsed[$index];" ng-click="toggleStationList($index);"></div>
+
+		    <!-- Offline Station CheckBox Icon-->
+		     <div  class="icon listLeftImgComparePg stationListLeftImgOfflineCmrPg" ng-if="stationDetail.metrics.length == 0"></div>
+
+		     <!--StationName Div -->
+		     <div class="listLeftContent" id="listLeftContentComparePg" ng-click="toggleStationList($index);">  {{stationDetail.asset.assetName?stationDetail.asset.assetName:stationDetail.asset.srNo}}</div>
+
+			 <!-- Toggle Icon Div -->
+			 <div class="listRightContentComparePg" id="listRightContentComparePg" ng-if="stationDetail.metrics.length > 0" ng-click="toggleStationList($index);"> </div>
+
+            <!-- Offline Text Shown when Station is Offline -->
+             <div class="listRightContentComparePg" id="listRightContentComparePg" ng-if="stationDetail.metrics.length == 0">
+		    	<span class="listRightSpanTopTxt">OFFLINE</span>
+		     </div>
+
+	        <!-- Toggle  Icons (Show when Station is Online)-->
+	         <div style="margin: 0;"  class="icon listRightImg" ng-if="stationDetail.metrics.length > 0" ng-class="'listRightImgUp'" ng-show="sensorsCollapsed[$index]" ng-click="toggleStationList($index);"></div>
+			 <div  style="margin: 0;" class="icon listRightImg" ng-if="stationDetail.metrics.length > 0" ng-class="'listRightImgDown'" ng-hide="sensorsCollapsed[$index]" ng-click="toggleStationList($index);"></div>
+		    <!-- Toggle Icon closed -->
+
+		    <!--  Offline Icon (Shown when Station is Offline)-->
+		     <div  class="icon listRightImg listRightImgOffline" style="margin: 0;"ng-if="stationDetail.metrics.length == 0"></div>
+		    <!--  Offline Icon End -->
+
+		    <!-- Sensors's List  -->
+		     <ul id="ulShowId{{$index}}" class="divNestedListContainerDashboard" ng-if="sensorsCollapsed[$index]">  <!-- Nested list start  class="divNestedListContainerDashboard" -->
+
+		       <li  class="stationLstItemDetailsCmprPg" ng-repeat="item in  stationDetail.metrics" ng-init="columnIndex = $index">
+	           	 <label>
+				      <input type="checkbox" class="compareStationListCheckbox" ng-model="isCheck"  ng-click="checkedOr(stationDetail, item, isCheck, $index, $parent.$index, $event)" ng-init='isCheck=false' >
+				      <span style="font-Size:14px;">{{this[rowIndex+'st'+columnIndex]}}</span>
+			     </label>
+	           </li>
+
+		     </ul>
+		     <ul id="ulHideId{{$index}}" class="divNestedListContainerDashboard" ng-hide="sensorsCollapsed[$index]">
+		         <li><li>
+		    </ul>
+ 	    </div>
+	  </li>
+	</ul>
+
+	</ion-content>
+	<ion-footer-bar class="bar-subfooter bar-stable subFooterComparePg">
+            <div class = "col text-center">
+               <label class="item loginSubmit">
+                <button id="signInBtn" class="button btnCompareStaionPg" data-ng-click="gotoCompareStation();">Compare Readings</button>
+               </label>
+           </div>
+	</ion-footer-bar>
+
+	<ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		    <!-- Tab 1 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Compare" icon="tabcompare"  ng-click="gotoCompareview();" class = "active">
+		    <!-- Tab 2 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Events" icon="tabalerts" ng-click="gotoAlertview();">
+		    <!-- Tab 3 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Settings" icon="tabsettings" ng-click="gotoSettingview();">
+    <!-- Tab 3 content -->
+  </ion-tab>
+
+	</ion-tabs>
+
+</ion-view>

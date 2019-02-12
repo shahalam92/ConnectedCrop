@@ -1,0 +1,45 @@
+<div class="">
+    <div class="row padding-l-0 padding-r-0">
+        <div class="col">
+            {{message}} <span class="popup_infoicon" ng-click="gotoInfo()"><img src="./img/setting/popup_info.png" alt=""></span>
+            </div>
+    </div>
+    <div class="row row-center border-bottom-grey-solid" >
+            <div class="col">
+                    <button ng-click="clickedYes()" class="button yes-button">
+                            YES
+                    </button>
+                    <button ng-click="clickedNo()" class="button no-button ">
+                            NO
+                    </button>
+            </div>
+    </div>
+    <div class="row" style="padding:5%;">
+            <div class="col text-center" ng-click="close()">
+             CANCEL
+            </div>
+    </div>
+
+  </div>
+  <style>
+  .notification img{
+        display: none;
+  }
+  .yes-button{
+    background: #549200;
+    width: 40%;
+    color: #fff;
+    border-radius: 25px;
+  }
+  .no-button{
+    background: #7B8DA1;
+    width: 40%;
+    border-radius: 25px;
+    color: #fff;
+    margin-left: 15%;
+  }
+  
+  .button{
+        min-height: 30px;
+   }
+  </style>

@@ -1,0 +1,23 @@
+<ion-modal-view>
+<ion-header-bar align-title="left" class="bar-dark">
+  <div class="buttons">
+   <button class="button" ng-click="closeChooseOrg()" style="background:none;border:none;color:#fff;font-size:18px">Back</button>
+ </div>
+   <h3 class="title">Choose Organization</h3>
+  <div class="buttons">
+      <button class="button" ng-click="saveChooseOrg()" style="background:none;border:none;color:#fff;font-size:18px">Save</button>
+  </div>
+ </ion-header-bar>
+ <ion-content>
+
+   <ion-list>
+       <ion-item class="item-checkbox" ng-repeat="item in items">
+           <label class="checkbox">
+               <input ng-click="updateSelection($index, items,item)" ng-model="item.checked" type="checkbox">
+           </label>
+           {{ item.organizationName }}
+       </ion-item>
+    </ion-list>
+
+    </ion-content>
+  </ion-modal-view>

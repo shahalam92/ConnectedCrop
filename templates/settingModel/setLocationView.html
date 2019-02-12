@@ -1,0 +1,30 @@
+
+ <ion-view cache-view='false' view-title="LocationView">
+   <div class="bar bar-header themeHeader">
+     <div class="themeHeaderBgImg">
+       <div class="themeHeaderDivLeft"ng-click="gotoConfigSetting();"><img src="./img/backArrow.png" class="themeHeaderIconOnLeft" /></div>
+       <div class="themeHeaderDivCenter"><span class="themeHeaderTitle ">{{stationDetail.assetName?stationDetail.assetName:stationDetail.srNo}}</span></div>
+     </div>
+   </div>
+
+   <ion-content class="mapContent">
+    <div  id="map" >
+          <div style="background:transparent;position: absolute;top:0;width:100%; height:90px;"ng-click="" ></div>
+          <div style="position: absolute;right: 25px;bottom: 100px;">
+        		<img src="img/location.png" style="height:40px;z-index:1000"  ng-click="CurrentLoct()">
+       	  </div>
+          <div style="background:transparent;position: absolute;bottom:0;width:100%; height:100px;" ng-click=""></div>
+	</div>
+  <div style="position: absolute;right:45vw;bottom: 53vh;">
+    <img src="img/pushpinG.png" style="height:50px;">
+  </div>
+  <div class="subFooterComparePg"style=" text-align: center;position: absolute;bottom:0;width:100%; height:100px;" ng-click="">
+    <div class="table_label "><div class="table_cell">Lattitude</div></div>
+    <div class="table_input"><div class="table_cell"><input type="text" class="station-name-input-box" ng-model="station.lat" placeholder="Add Longitude value"   /></div></div>
+    <div class="table_label"><div class="table_cell">Longitude</div></div>
+    <div class="table_input"><div class="table_cell"><input type="text" class="station-name-input-box" ng-model="station.long" placeholder="Add Longitude value"   /></div></div>
+    <button id="save_button"class="button save-button " data-ng-click="saveLocation(station)">Save</button>
+    <!-- <div class="save_button" ng-click="saveLocation(station)">Save</div> -->
+</div>
+  </ion-content>
+ </ion-view>

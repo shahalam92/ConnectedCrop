@@ -1,0 +1,91 @@
+<ion-view cache-view='false' view-title="orgList" class="alertPageImg">
+	<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoConfig();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Inversion alert settings</span></div>
+			<div class="themeHeaderDivRight" ></div>
+		</div>
+	</div>
+<ion-content class="has-header has-footer themeContent threshold contentStationDetail padding">
+        <div class="row row-top">
+                <div class="col col-33">
+                    <img style="width:100%;" ng-src="./img/setting/Inversion_alert.png" alt="" src="./img/setting/Inversion_alert.png">
+                </div>
+        
+                <div class="col col-67 padding-t-0">
+                        <label class="font-18 color-dark font-halvetica-neue-light" for="temp1">Sensor at the top:</label>
+                        <img ng-show="stationPostDataAttributes[0].assetName.length" class="cross-icon-img" src="./img/shared/delete.png" alt="" ng-click="remove(0)">
+                        <input  ng-click="openPopup(stationPostDataAttributes[1],0)" 
+                                ng-model="stationPostDataAttributes[0].assetName" type="text" 
+                                class=" transparent-input-color-blue border-bottom-grey-solid"
+                                placeholder="Choose sensor name"
+                                name="sensor_1" readonly 
+                                style="margin-bottom: 17%;margin-top: 5%;  width:90%; font-size:20px !important;" >
+                        
+                        <label class="font-18 color-dark font-halvetica-neue-light" for="temp2" >Sensor at the bottom:</label>
+                        <img ng-show="stationPostDataAttributes[1].assetName.length" class="cross-icon-img"src="./img/shared/delete.png" alt="" ng-click="remove(1)">
+                        <input ng-click="openPopup(stationPostDataAttributes[0],1)" 
+                               ng-model="stationPostDataAttributes[1].assetName" type="text" 
+                               class=" transparent-input-color-blue border-bottom-grey-solid"
+                               placeholder="Choose sensor name" 
+                               name="sensor_2" readonly 
+                               style="margin-top: 5%; font-size:20px !important; width:90%;">
+                </div>
+            </div>
+
+            <div class="col font-14" style="padding-left:10px; padding-bottom: 10px;">
+                Temperature at the top should be warmer than temperature at the bottom by at least:
+            </div>
+            <div class="row row-center">
+                    <div class="col col-40 text-center">
+                        <div class="row row-center padding-b-0 " style="background: #DEE3E7;border-radius: 5px; padding-left:0;padding-right:0;">
+                                    <div class="col text-center " ng-click="gotoDecrementTempDiff()">
+                                            <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                    </div>
+                                    <div class="col  text-center padding-t-0 padding-lr-0">
+                                            <!-- <input type="number" min="0" max="20" step="1"  class="transparent-input-color-blue font-18 text-center"   style="width: 100%;" ng-model="inversionValue"> -->
+                                            <input id="inversion"  type="number" class="transparent-input-color-blue font-16-res text-center"   ng-change="checkValue(inversionValue)" style="width: 100%;" ng-model="inversionValue" >
+                                    </div>
+                                    <div class="col  text-center" ng-click="gotoIncrementTempDiff()">
+                                            <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col col-60 text-left font-22 font-halvetica-neue-thin color-dark">
+                            {{unit}}
+                    </div>
+                   
+            </div>
+            <div class="email_log error_div_signup" style="width: 76%;">
+                <div class="danger_icon" style="margin-top: 7%;"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+                 <div class="validation_message" id="inversion_error">Please provide a valid number</div>
+            </div>
+            <button class="button save-button" ng-click="save();" style="margin-top: 1%;">Save</button>
+  </ion-content>
+    <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>-->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+</ion-view>
+<style>
+.row + .row {
+    margin-top: 0;
+    padding-top: 5px;
+}
+.row:last-child{
+	border-bottom: none;
+}
+</style>

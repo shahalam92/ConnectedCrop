@@ -1,0 +1,47 @@
+<ion-modal-view class="alertPageImg">
+        <div class="bar bar-header themeHeader">
+                <div class="themeHeaderBgImg">
+                    <div class="themeHeaderDivLeft" ng-click="closeGotoInfo()"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+                    <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Sensor Setup</span></div>
+                    <div class="themeHeaderDivRight"></div>
+                </div>
+            </div>
+         <ion-content class="has-header has-footer themeContent contentStationDetail font-halvetica-neue-thin font-16 ">
+                    <img src="./img/setting/illustration_popup.png" alt="" style="    width: 100%;
+                    ">
+                    <div class="padding" style="margin-top:4%;">
+                            <button ng-click="closeGotoInfo()" class="button cancel-button ">
+                                   CANCEL
+                            </button>
+                    </div>
+        
+         </ion-content>
+         <!-- <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+    
+                <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+                </ion-tab>
+      
+                <ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+                </ion-tab>
+      
+                <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+                </ion-tab>
+      
+                <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+      
+                </ion-tab>
+      
+          </ion-tabs> -->
+</ion-modal-view>
+<style>
+      .cancel-button{
+    background: #7B8DA1;
+    width: 50%;
+    border-radius: 25px;
+    color: #fff;
+    margin-left: 25%;
+  }
+  .modal-backdrop, .modal-backdrop-bg {
+    z-index: 13;
+}
+</style>

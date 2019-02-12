@@ -1,0 +1,106 @@
+<ion-view  cache-view="cache" view-title="settingview" class="alertPageImg">
+
+    <div class="bar bar-header themeHeader">
+        <div class="themeHeaderBgImg">
+            <div class="themeHeaderDivLeft" ng-click="gotoSensorsList();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+            <div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Thresholds</span></div>
+        </div>
+    </div>
+
+ <ion-content class="has-header has-footer  threshold themeContent themeContentConfigStation font-halvetica-neue-thin" padding>
+     <div class="row color-dark config-row">
+        <div class="col text-left">
+            Sensor name:
+        </div>
+     </div>
+     <div class="row row-center">
+        <div class="col col-90 border-bottom-grey-solid" style="margin:auto;">
+             <input type="text" class="input-for-notification font_style "placeholder="Enter sensor name" ng-model="station_name.assetName" maxlength="150">
+         </div>   
+     </div>
+     <div class="row color-dark config-row" style="margin-top: 10%;">
+        <div class="col text-left">
+           Notifications thresholds:
+        </div>
+     </div>
+     <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types">
+        <div class="col col-50 text-left padding-l-4">
+           Temperature is above:
+        </div>
+        <div class="col col-50 text-left margin-l-5">
+            <div class="row row-center">
+                <div class="col col-80 padding-tb-0  text-center">
+                    <div class="row row-center padding-b-0 padding-lr-0" style="background: #DEE3E7;border-radius: 5px;">
+                                <div class="col text-center padding-r-0" ng-click="gotoDecrementTempHeigh()">
+                                        <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                </div>
+                                <div class="col  text-center padding-t-0  padding-lr-0">
+                                        <input type="number" class="transparent-input-color-blue font-16-res text-center" ng-change="checkValue(threshold.high,'temp_high_log')" style="width: 100%;" ng-model="threshold.high">
+                                </div>
+                                <div class="col  text-center padding-b-0  padding-l-0" ng-click="gotoIncrementTempHeigh()">
+                                        <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                </div>
+                    </div>
+                </div>
+                <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                        {{unit}}
+                </div>
+               
+                </div>
+         </div>
+     </div>
+     <div class="threshold_error temp_high_log error_div_signup">
+        <div class="danger_icon" ><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+         <div class="validation_message">{{message}}</div>
+    </div>
+     <div class="row row-center color-dark font-18 border-bottom-grey-solid notification-types">
+        <div class="col col-50 text-left padding-l-4">
+           Temperature is below:
+        </div>
+        <div class="col col-50 text-left margin-l-5">
+            <div class="row row-center">
+                <div class="col col-80 padding-tb-0  text-center">
+                    <div class="row row-center padding-b-0 padding-lr-0" style="background: #DEE3E7;border-radius: 5px;">
+                                <div class="col text-center  padding-r-0" ng-click="gotoDecrementTempLow()">
+                                        <img class="width-80" ng-src="./img/setting/minus.png" alt="" src="./img/setting/minus.png">
+                                </div>
+                                <div class="col  text-center padding-t-0  padding-lr-0">
+                                        <input type="number" class="transparent-input-color-blue font-16-res text-center"  ng-change="checkValue(threshold.low,'temp_low_log')"  style="width: 100%;" ng-model="threshold.low">
+                                </div>
+                                <div class="col  text-center  padding-l-0" ng-click="gotoIncrementTempLow()">
+                                        <img class="width-80" ng-src="./img/setting/plus.png" alt="" src="./img/setting/plus.png">
+                                </div>
+                    </div>
+                </div>
+                <div class="col col-25 text-center font-18 font-halvetica-neue-thin color-dark">
+                        {{unit}}
+                </div>
+               
+        </div>
+         </div>
+     </div>
+     <div class="threshold_error temp_low_log error_div_signup">
+        <div class="danger_icon"><img alt="!" src="./img/excavation.png" style="width:100%;"></div>
+         <div class="validation_message">{{message}}</div>
+    </div>
+   <button class="button save-button" data-ng-click="save();" style="margin-top: 15vh;">Save</button>
+ </ion-content>
+
+     <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+          <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+          </ion-tab>
+
+          <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+          </ion-tab>-->
+
+          <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+          </ion-tab>
+
+          <ion-tab title="Settings"  icon="tabsettings" ng-click="gotoSettingview();" class = "active">
+          </ion-tab>
+
+    </ion-tabs>
+
+
+</ion-view>

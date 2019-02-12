@@ -1,0 +1,86 @@
+ <ion-view view-title="alertview" class="alertPageImg">
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<!-- <div class="themeHeaderDivLeft"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" ng-click="gotoSettingPg();"/></div> -->
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Events Log</span></div>
+		</div>
+	</div>
+
+    <ion-content class="has-header has-footer themeContent contentStationDetail" when-scrolled="getEvents()">
+       <ion-refresher spinner="none" pulling-text="Pull to refresh..." on-pulling="doRefresh()"> </ion-refresher>
+       <div class="time-update_DIV">
+          <div class="reload_icon" ng-click=""></div><div class="lastUpdate">Last updated:</div><div class="relative-time" am-time-ago='time'></div>
+
+       </div>
+	  <div class="list-item_ParentDIV" >
+                <ion-item id='liId{{$index}}' class="list-item"  ng-repeat="event in evnets_list">
+	             <div class="list-item_childDIV_left">
+	             <div ng-if="multiSearch(event.message,['inversion'])" class="icon list-item_IMG1 inversion-icon"></div>
+	             <div ng-if="multiSearch(event.message,['reached_wp','dry_soil'])" class="icon list-item_IMG1 dry-soil-icon"></div>
+	             <div ng-if="multiSearch(event.message,['reached_fc','wet_soil'])" class="icon list-item_IMG1 wet-soil-icon"></div>
+		   				 <div ng-if="multiSearch(event.message,['close_to_wp'])" class="icon list-item_IMG1 dry-soil-warning-icon"></div>
+		   				 <div ng-if="multiSearch(event.message,['close_to_fc'])" class="icon list-item_IMG1 wet-soil-warning-icon"></div>
+	             <div ng-if="multiSearch(event.message,['high_temp'])" class="icon list-item_IMG1 high-temp-icon"></div>
+	             <div ng-if="multiSearch(event.message,['low_temp'])" class="icon list-item_IMG1 low-temp-icon"></div>
+	             <div ng-if="multiSearch(event.message,['bad_connection'])" class="icon list-item_IMG1 bad-connection-icon"></div>
+	             <div ng-if="multiSearch(event.message,['low_battery'])" class="icon list-item_IMG1 low-battery-icon"></div>
+	             <div ng-if="multiSearch(event.message,['high_frequency'])" class="icon list-item_IMG1 high-frequency-icon"></div>
+                <div ng-if="multiSearch(event.message,['fw_update_scheduled'])" class="icon list-item_IMG1 update-scheduled-icon"></div>
+              <div ng-if="multiSearch(event.message,['fw_update_success'])" class="icon list-item_IMG1 update-success-icon"></div>
+                <div ng-if="multiSearch(event.message,['fw_update_failure'])" class="icon list-item_IMG1 update-failure-icon"></div>
+
+	             <div class="list-item_MSG">
+	               <div class="text-align-div">
+		               <!-- <span ng-repeat="appcode in event.resultLog.app.appArguments"> -->
+			               <span style="color: #393939;font-size: 17px;">{{event.event_description}}</span>
+		               <!-- </span> -->
+	               <div style="color: #7b93ab;font-size: 16px;"> <span style="color: #7b93ab;font-size: 15px;">On</span> {{event.assetName}}</div>
+	               <div id="ulShowId{{$index}}" class="message-div" ng-hide="!stationMetricListShowStatus[$index]" >{{event.event_message}}</div>
+	               </div>
+	             </div>
+	           </div>
+	           <div class="list-item_childDIV_right">
+	             <div class="list-item_DATE">
+	              <div class="text-align-div">
+	              <div style="font-size: 16px;color: #737373;">{{event.createdDate | date:"h:mm a"}}</div>
+	              <div style="font-size: 11px;color: #8b8b8b;">{{event.createdDate | date:"dd-MM-yyyy"}}</div>
+	              </div>
+	             </div>
+	              <div   class="icon list-item_IMG2"  ng-class="'listRightImgUp'" ng-hide="!stationMetricListShowStatus[$index]" ng-click="toggleList($index);">
+				</div>
+				<div  ng-if="event.event_message" class="icon list-item_IMG2" ng-class="'listRightImgDown'" ng-show="!stationMetricListShowStatus[$index]" ng-click="toggleList($index);">
+				</div>
+
+	           </div>
+
+
+	       </ion-item>
+
+	        <!--  <p id="noRecordAssetDetailpg" ng-if="stationDetails.metrics == 0" class="noRecordsfound">There are no  records.</p> -->
+	   </div>
+
+
+  </ion-content>
+
+<ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+    <!-- Tab 1 content -->
+  </ion-tab>
+
+  <!-- <ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+    
+  </ion-tab> -->
+
+  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts"  ng-click="gotoAlertview();" class = "active">
+    <!-- Tab 3 content -->
+  </ion-tab>
+
+  <ion-tab title="Settings" icon="tabsettings" ng-click="gotoSettingview();">
+    <!-- Tab 3 content -->
+  </ion-tab>
+
+</ion-tabs>
+
+
+</ion-view>

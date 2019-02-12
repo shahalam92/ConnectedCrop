@@ -1,0 +1,97 @@
+<ion-view can-swipe-back="false" view-title="step_1" class="activateStationImg">
+<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft"ng-click="vm.goBack();"><img src="./img/backArrowBlue.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Add New Station</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+ <ion-content class="has-header themeContent setingContent activate " id="stepone">
+	<div class="radio_popup" ng-show="vm.showPopUp">
+	  <div class="item item-divider">
+          	Select Organization
+    </div>
+		<ion-list ng-repeat="org in vm.organization">
+		  <ion-radio ng-model="vm.request_dto.organizationCode" ng-value="{{org.organizationCode}}">{{org.organizationName}}</ion-radio>
+    </ion-list>
+	</div>
+  <div class="step_no text-center">
+		<p>
+			Step 1 <span>of 4:</span>Register Station
+		</p>
+  </div>
+	<div class="step_one_message">
+		<p>
+			Please check the sticker at the back of the station.
+		</p>
+	</div>
+	<img src="img/activateStation/sensors.jpg" style="width:94%;margin-left:3%;" alt="Sensors" />
+	<div class="step_one_message margin_top_">
+		<p>What would you like to call it?</p>
+	</div>
+	<div class="input_div" style="margin-top: 2%;">
+			 <div class="name-type-input-div" style=" border:none;">
+						 <input type="text" class="station-name-input-box" ng-model="vm.request_dto.assetName" placeholder="Station Name"  my-maxlength="30"/>
+			 </div>
+	</div>
+	<br>
+	<br>
+	<div class="scan_QR text-center margin_top_">
+		<button type="button" name="button" ng-click="vm.scanBarCode()">Scan QR Code</button>
+		<h4 style="margin-bottom: 2%;">OR</h4>
+		<div class="input_container" style="padding-bottom:2%;">
+			<div class="row row-center padding-b-0">
+					<div class="col col-90 font-17">					
+								Type in the details manually:
+					</div>
+					<div class="col col-10 text-right"  ng-click="vm.collapsed=!vm.collapsed">
+						<img  style="width: 60%;" ng-src="./img/setting/arrow-up.png" ng-hide="vm.collapsed" > 
+						<img  style="width: 60%;" ng-src="./img/setting/arrow-down.png" ng-show="vm.collapsed ">
+					</div>
+				</div>
+		<div ng-show="vm.collapsed">			
+		<input ng-disabled="vm.disabled" id="srNo" type="text" class="reset station-name-input-box" ng-model="vm.request_dto.srNo"placeholder="Type the serial number" maxlength="150"/>
+		<span  id="srNo0"class="color-red">Required field</span>
+		<input ng-disabled="vm.disabled" id="0" type="text" class="reset station-name-input-box" ng-model="vm.stationPostDataAttributes[0].attributeValue" placeholder="Type the HW version" maxlength="150"/>
+		<span  id="00"class="color-red">Required field</span>
+		<input ng-disabled="vm.disabled" id="3" type="text" class="reset station-name-input-box" ng-model="vm.stationPostDataAttributes[3].attributeValue" placeholder="Type the BL version" maxlength="150"/>
+		<span  id="33"class="color-red">Required field</span>
+		<input ng-disabled="vm.disabled"  id="2" type="text" class="reset station-name-input-box" ng-model="vm.stationPostDataAttributes[2].attributeValue" placeholder="Type the initial FW version" maxlength="150"/>
+		<span  id="22"class="color-red">Required field</span>
+		<input ng-disabled="vm.disabled" id="4" type="number"class="reset station-name-input-box" ng-model="vm.stationPostDataAttributes[4].attributeValue"    placeholder="Type the ICCID" />
+		<span  id="44"class="color-red">Required field</span>
+		<input ng-disabled="vm.disabled" id="5" type="text" class="reset station-name-input-box" ng-model="vm.stationPostDataAttributes[5].attributeValue"    placeholder="Type the MFG date YYYY-MM-DD"/>
+		<span  id="55"class="color-red">Required field</span> 
+	 </div>
+	</div>
+    <!-- <div class="serial_no_background">
+		<div class="input_div" style="margin-top: 9%;width: 100%;">
+				 <div id="srNo" class="name-type-input-div" style=" border:none;">
+							 <input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+				 </div>
+					<div id="srNo" class="name-type-input-div" style=" border:none;">
+						<input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+					</div>
+					<div id="srNo" class="name-type-input-div" style=" border:none;">
+					<input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+					</div>
+					<div id="srNo" class="name-type-input-div" style=" border:none;">
+					<input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+					</div>
+					<div id="srNo" class="name-type-input-div" style=" border:none;">
+					<input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+					</div>
+					<div id="srNo" class="name-type-input-div" style=" border:none;">
+					<input type="text" class="station-name-input-box" ng-model="vm.request_dto.srNo" placeholder="Type the serial number" maxlength="150"/>
+					</div>
+
+		</div>
+ 		</div> -->
+	</div>
+   <button type="button" class="activate_button" ng-click="vm.register(vm.request_dto)" name="button">Register</button>
+
+ </ion-content>
+
+</ion-view>

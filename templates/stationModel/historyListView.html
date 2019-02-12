@@ -1,0 +1,60 @@
+ <ion-view  cache-view="false" view-title="sensordetailview" class="sensorDetailPageImg">
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft" ng-click="gotoSensorDetail();"><img src="./img/backArrow.png" class="themeHeaderIconOnLeft" /></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle"> History</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+
+<ion-content class="has-header has-footer themeContent contentStationDetail" onscroll="">
+  <div id="divListContainerHistoryPg" class="divlistContainerHistorypg">
+
+       <ion-item  class="liHistoryListpg" collection-repeat="history in historyList  track by $index">
+				<div ng-if="$index!==0" ng-show="(historyList[$index-1].detectionTime|date:'MMM dd yyyy') !== (historyList[$index].detectionTime|date:'MMM dd yyyy')" class="line_seperator"></div>
+				   <div class="row row-center font-14">
+							<div class="col col-30">
+								{{history.detectionTime | date:"MMM dd yyyy"}}
+							</div>
+							<div class="col col-20">
+								{{history.detectionTime | date:"h:mm a"}}
+							</div>
+							<div class="col col-50 text-align-center" ng-class="history.status">
+								<span  class="color-white" ng-if="history.status!='sensor-status-error'">{{history.reading|number:1}}
+									<span>{{history.unit}}</span>
+							</span>
+							 <span  class ="iphone_5_error_history_font" ng-if="history.status=='sensor-status-error'">{{history.reading}}</span>
+							</div>
+					 </div>
+		
+       </ion-item>
+         <p id="noRecordAssetDetailpg" ng-if="stationDetails.metrics == 0" class="noRecordsfound">There are no  records.</p>
+   </div>
+ </ion-content>
+	 <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" class = "active" ng-click="gotoDashboard()">
+		    <!-- Tab 1 content -->
+		  </ion-tab>
+
+		 <!--  <ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		    
+		  </ion-tab> -->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		    <!-- Tab 3 content -->
+		  </ion-tab>
+
+		  <ion-tab title="Settings" icon="tabsettings" ng-click="gotoSettingview();">
+		    <!-- Tab 3 content -->
+		  </ion-tab>
+
+      </ion-tabs>
+
+</ion-view>
+<style>
+	.scroll-bar-indicator.scroll-bar-fade-out {
+    opacity: 1 !important;
+}
+</style>

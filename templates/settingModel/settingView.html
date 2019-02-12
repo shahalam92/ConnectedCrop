@@ -1,0 +1,49 @@
+
+
+<ion-view can-swipe-back="false" view-title="settingview" class="alertPageImg">
+<!-- Header -->
+	<div class="bar bar-header themeHeader">
+		<div class="themeHeaderBgImg">
+			<div class="themeHeaderDivLeft"></div>
+			<div class="themeHeaderDivCenter"><span class="themeHeaderTitle headeTextDark">Settings</span></div>
+			<div class="themeHeaderDivRight"></div>
+		</div>
+	</div>
+
+ <ion-content class="has-header has-footer themeContent setingContent">
+       <!-- Setting Options List -->
+        <ul class="settings_list">
+          <li ng-click="gotoSelectStationPg();">
+        	 <span>Configure Station</span>
+	     	 <!-- <img style=" width: 10%; float: right;" src="./img/setting/arrow_right.png"> -->
+          </li>
+          <li ng-click="gotoStepOne();"><span>Add New Station</span></li>
+          <li ng-click="gotoAccounts();" ><span>Accounts</span></li>
+          <!-- <li ng-click="gotoChangePassword();"><span>Change Password</span></li> -->
+          <li ng-click="gotoHelp();"><span>Help</span></li>
+		  <!-- <li ng-click="gotoContact();"><span>Contact Us</span></li> -->
+          <li ng-click="gotoAbout();"><span>About</span></li>
+          <li ng-click="gotoLogout();"><span>Logout</span></li>
+
+        </ul>
+	</ion-content>
+
+	 <ion-tabs class="tabs-icon-top" id="dashboardFooter">
+
+		  <ion-tab title="Home" icon="tabhome" ng-click="gotoDashboard();">
+		  </ion-tab>
+
+		  <!--<ion-tab title="Compare" icon="tabcompare" ng-click="gotoCompareview();">
+		  </ion-tab>-->
+
+		  <ion-tab title="Events" badge="events_count" badge-style="badge-assertive" icon="tabalerts" ng-click="gotoAlertview();">
+		  </ion-tab>
+
+		  <ion-tab title="Settings"  icon="tabsettings"  ng-click="gotoSettingview();" class = "active">
+
+		  </ion-tab>
+
+	</ion-tabs>
+
+
+</ion-view>
