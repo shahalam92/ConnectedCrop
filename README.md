@@ -2,9 +2,7 @@
 
 <p align="center"><img src="https://lh3.googleusercontent.com/yC6RqDt6thH6LwAhGnhU7GI3CwkgayEUgqOzQklut39vgWbiCkaGIMmnarAPdCi4pJfF=s180-rw"></p>
 
-Application Name : CCMobile / Connected Crop 
-
-Platform : Ionic
+<b>Platform</b> : Ionic
 
 <b>Description</b>
 
